@@ -1,3 +1,7 @@
+import React from 'react'
+
+export const Brightness = () => {
+    return (     
 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_7411_373)">
 <path d="M8.4375 12.6562C10.7675 12.6562 12.6562 10.7675 12.6562 8.4375C12.6562 6.10755 10.7675 4.21875 8.4375 4.21875C6.10755 4.21875 4.21875 6.10755 4.21875 8.4375C4.21875 10.7675 6.10755 12.6562 8.4375 12.6562Z" fill="white"/>
@@ -16,3 +20,6 @@
 </clipPath>
 </defs>
 </svg>
+  )
+}
+
