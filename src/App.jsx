@@ -39,43 +39,12 @@ function App() {
     },
   ];
 
-  const platformData = [
-    {
-      title: "book bazaar",
-      progress: 50,
-      amount: "2,500,000",
-      percent: "15",
-      color: "#6160dc",
-    },
-    {
-      title: "artisan aile",
-      progress: 40,
-      amount: "1,800,000",
-      percent: "10",
-      color: "#54c5eb",
-    },
-    {
-      title: "toy troop",
-      progress: 30,
-      amount: "1,200,000",
-      percent: "8",
-      color: "#ffb74a",
-    },
-    {
-      title: "x store",
-      progress: 25,
-      amount: "500,000",
-      percent: "6",
-      color: "#ff4a55",
-    },
-  ];
-
   return (
     <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
       <div className="flex flex-col md:gap-5 gap-3 md:p-5 p-2">
         <div className="flex flex-col md:flex-row md:gap-5 gap-3">
           <BarChart />
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3">
             {cardData.map((data, index) => (
               <TrendCard key={index} data={data} />
             ))}
@@ -83,7 +52,7 @@ function App() {
         </div>
         <div className="flex flex-col md:flex-row  gap-3">
           <Table />
-          <Platorm platformData={platformData} />
+          <Platorm />
         </div>
       </div>
     </Layout>
