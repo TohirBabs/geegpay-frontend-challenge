@@ -37,7 +37,7 @@ const Header = ({ navOpen, setNavOpen }) => {
             </div>
           </div>
           <div className="p-1 rounded-full border text-xs items-center flex">
-            <img src="./src/assets/images/userdp.png" className="h-8 w-8" />
+            <img src="/src/assets/images/userdp.png" className="h-8 w-8" />
             <div className="px-2 text-right hidden md:block">
               <p>justin bergerson</p>
               <p>justin@gmail.com</p>
