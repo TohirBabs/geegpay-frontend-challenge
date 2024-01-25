@@ -1,73 +1,102 @@
-import React from 'react'
+import React from "react";
 
 export const Table = () => {
+  const headers = ["name", "date", "amount", "status", "invoice"];
+  const tableData = [
+    {
+      name: "marcus bergson",
+      date: "nov 15, 2023",
+      amount: "80,000",
+      status: "paid",
+    },
+    {
+      name: "jaydon vaccaro",
+      date: "nov 15, 2023",
+      amount: "150,000",
+      status: "refund",
+    },
+    {
+      name: "corey schleifer",
+      date: "nov 14, 2023",
+      amount: "87,000",
+      status: "paid",
+    },
+    {
+      name: "cooper press",
+      date: "nov 14, 2023",
+      amount: "100,000",
+      status: "refund",
+    },
+    {
+      name: "phillip lubin",
+      date: "nov 13, 2023",
+      amount: "78,000",
+      status: "paid",
+    },
+  ];
 
-    const tableData = [
-        { name: "marcus bergson", date: "nov 12, 2023", amount: 80000, status: "paid" },
-        { name: "marcus bergson", date: "nov 12, 2023", amount: 80000, status: "paid" },
-        { name: "marcus bergson", date: "nov 12, 2023", amount: 80000, status: "paid" },
-        { name: "marcus bergson", date: "nov 12, 2023", amount: 80000, status: "paid" },
-        { name: "marcus bergson", date: "nov 12, 2023", amount: 80000, status: "paid" },
-        
-    ]
-
-    const TableRow = ({ key, data }) => {
-    
-
+  const TableRow = ({ data }) => {
     return (
-      <tr key={key}>
-        <td>{data.name}</td>
-        <td>{data.date}</td>
-        <td>{data.amount}</td>
+      <tr className="h-14 border-t capitalize">
+        <td>
+          <img
+            src={`/src/assets/images/${data.name}.png`}
+            alt=""
+            className="inline mr-2 align-middle"
+          />
+          {data.name}
+        </td>
+        <td className="text-[#737373] text-sm">{data.date}</td>
+        <td className="text-[#0d062d]">${data.amount}</td>
         {/* <FormattedDate date={data.createdAt} /> */}
-        <td className="">
+        <td
+          style={{ color: data.status === "paid" ? "#34caa5" : "#ed544e" }}
+          className=""
+        >
           <p>{data.status}</p>
         </td>
-        {/* <td>
-          <img src={dots_icon} onClick={() => setShowMenu((show) => !show)} />
-          {showMenu && (
-            <div className="row_menu" onClick={() => setShowMenu(false)}>
-              <NavLink to={data.id}>
-                <img src={view_icon} />
-                <p>view details</p>
-              </NavLink>
-              <button onClick={() => setStatus("blacklisted")}>
-                <img src={cancel_user_icon} />
-                <p>blacklist user</p>
-              </button>
-              <button onClick={() => setStatus("active")}>
-                <img src={activate_user_icon} />
-                <p>activate</p>
-              </button>
-            </div>
-          )}
-        </td> */}
+        <td>
+          <button className="p-2 py-1 rounded-full hover:bg-[#26282c]/10">
+            <img
+              src="/src/assets/icons/document-download.svg"
+              alt=""
+              className="inline mr-2"
+            />
+            view
+          </button>
+        </td>
       </tr>
     );
-
   };
   return (
     <div className=" text-[#26282c]">
-          <div className="p-4 border rounded-2xl bg-[#fff] flex flex-col gap-6 h-max md:w-[55vw]">
-              <div className="flex items-center justify-between">
-          <p className="capitalize text-[#26282c] text-xl font-semibold">latest orders</p>
-            <p>see all</p>
-              </div>
-              <table>
-          {/* <thead>
+      <div className="p-4 border rounded-2xl bg-[#fff] flex flex-col gap-5 h-max md:w-[55vw]">
+        <div className="flex items-center justify-between">
+          <p className="capitalize text-[#26282c] text-xl font-semibold">
+            latest orders
+          </p>
+          <button className="text-[#34caa5] px-3">see all</button>
+        </div>
+        <table>
+          <thead>
             <tr>
               {headers.map((header, index) => (
-                <TableHeader key={index} header={header} />
+                <th
+                  className="text-left text-[#9ca4ab] capitalize font-semibold h-14"
+                  key={index}
+                >
+                  {header}
+                </th>
               ))}
             </tr>
-          </thead> */}
+          </thead>
           <tbody>
             {tableData.map((data, index) => (
               <TableRow key={index} data={data} />
             ))}
           </tbody>
         </table>
-          </div>
       </div>
-  )
-}
+    </div>
+  );
+};
