@@ -3,7 +3,7 @@ import React from 'react'
 const Header = ({navOpen, setNavOpen}) => {
   
   return (
-      <div className='border-b bg-[#fafafa] z-20 p-2 md:px-4 bg-[#fafafa] z-20 text-[#26282c] sticky top-0'>
+      <div className='border-b bg-[#fafafa] z-30 p-2 md:px-4 bg-[#fafafa] z-20 text-[#26282c] sticky top-0'>
           <div className='md:grid grid-cols-12 gap-8 flex justify-between items-center'>  
         <div className='md:col-span-7 flex justify-between items-center'>
           <img onClick={()=> setNavOpen(!navOpen)} src='/logo.svg' className='w-8 md:hidden mx-2' alt='site logo' />         
