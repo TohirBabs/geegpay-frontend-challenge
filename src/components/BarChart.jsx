@@ -17,20 +17,20 @@ export const BarChart = () => {
   ];
   return (
     <div className=" text-[#26282c]">
-      <div className="p-4 border rounded-2xl bg-[#fff] flex flex-col gap-6 h-max w-[55vw]">
+      <div className="md:p-4 p-2 border rounded-2xl bg-[#fff] flex flex-col gap-6 h-max md:w-[55vw] w-full">
         <div className="flex items-center justify-between">
-          <p className="capitalize text-[#26282c] text-xl font-bold">sales trends</p>
+          <p className="capitalize text-[#26282c] text-xl font-semibold">sales trends</p>
           <div className="flex items-center gap-2 text-sm">
             <p>sort by:</p>
             <div className="p-1 px-2 rounded-full border">weekly</div>
           </div>
         </div>
-        <div className="flex gap-8 text-xs relative">
+        <div className="flex md:gap-8 gap-4 text-xs relative">
           <div className="flex flex-col pb-4 justify-between">
             <div className="flex items-center gap-4">
               <p>50.0</p>
               <div className="w-[92%] absolute left-[8%] border-t border-dashed"></div>
-            </div>{" "}
+            </div>
             <div className="flex items-center gap-4">
               <p>40.0</p>
               <div className="w-[92%] absolute left-[8%] border-t border-dashed"></div>
@@ -53,8 +53,7 @@ export const BarChart = () => {
             </div>
           </div>
           <div
-            className="flex flex-1 justify-between items-end text-[#525252] capitalize
-         relative h-72"
+            className="flex flex-1 justify-between items-end text-[#525252] capitalize relative z-20 md:h-72 h-40"
           >
             {salesData.map((data, index) => (
               <div
@@ -63,8 +62,17 @@ export const BarChart = () => {
               >
                 <div
                   style={{ height: `${(data.sales / 50) * 18 - 2}rem` }}
-                  className="w-7 h-20 rounded-t-full bg-green-200/50"
-                ></div>
+                  className="group md:w-8 w-3 hidden md:block rounded-t-full bg-[#34caa5]/20 hover:bg-gradient-to-b hover:from-[#34caa5] hover:to-[#34caa5]/10 hover:to-70% cursor-pointer"
+                    >
+                        <span className="group-hover:visible invisible absolute z-10 -left-[50%] -top-10 after:absolute after:top-[100%] after:left-[50%] after:-mt-[5px] after:border-b-[#26282c] after:border-transparent after:border-[5px] w-20 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
+            {data.sales}
+          </span>
+                    </div>
+                <div
+                  style={{ height: `${(data.sales / 50) * 9 - 2}rem` }}
+                  className="md:w-7 w-3 md:hidden  rounded-t-full bg-[#34caa5]/50"
+                    >                    
+                </div>
                 <p>{data.month}</p>
               </div>
             ))}
