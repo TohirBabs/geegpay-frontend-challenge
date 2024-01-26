@@ -1,33 +1,43 @@
 import React from "react";
+import marcus from "../assets/images/marcus.png";
+import jaydon from "../assets/images/jaydon.png";
+import corey from "../assets/images/corey.png";
+import cooper from "../assets/images/cooper.png";
+import phillip from "../assets/images/phillip.png";
 
 export const Table = () => {
   const headers = ["name", "date", "amount", "status", "invoice"];
   const tableData = [
     {
+      img: marcus,
       name: "marcus bergson",
       date: "nov 15, 2023",
       amount: "80,000",
       status: "paid",
     },
     {
+      img: jaydon,
       name: "jaydon vaccaro",
       date: "nov 15, 2023",
       amount: "150,000",
       status: "refund",
     },
     {
+      img: corey,
       name: "corey schleifer",
       date: "nov 14, 2023",
       amount: "87,000",
       status: "paid",
     },
     {
+      img: cooper,
       name: "cooper press",
       date: "nov 14, 2023",
       amount: "100,000",
       status: "refund",
     },
     {
+      img: phillip,
       name: "phillip lubin",
       date: "nov 13, 2023",
       amount: "78,000",
@@ -39,11 +49,7 @@ export const Table = () => {
     return (
       <tr className="lg:h-14 h-12 border-t text-sm capitalize">
         <td className="text-[#3a3f51] font-semibold ">
-          <img
-            src={`/src/assets/images/${data.name}.png`}
-            alt=""
-            className="inline mr-2 align-middle"
-          />
+          <img src={data.img} alt="" className="inline mr-2 align-middle" />
           {data.name}
         </td>
         <td className="text-[#737373] ">{data.date}</td>

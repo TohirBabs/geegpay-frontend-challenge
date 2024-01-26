@@ -1,4 +1,5 @@
-import React from "react";
+import positiveGraph from "../assets/images/positive-graph.svg";
+import negativeGraph from "../assets/images/negative-graph.svg";
 
 export const TrendCard = ({ data }) => {
   return (
@@ -8,11 +9,7 @@ export const TrendCard = ({ data }) => {
           <img src={`/src/assets/icons/${data.icon}.svg`} />
         </div>
         <div>
-          {data.trendUp ? (
-            <img src="/src/assets/icons/positive-graph.svg" />
-          ) : (
-            <img src="/src/assets/icons/negative-graph.svg" />
-          )}
+          <img src={data.trendUp ? positiveGraph : negativeGraph} alt="" />
         </div>
       </div>
       <p className="md:text-lg text-md text-[#898989] font-medium capitalize">

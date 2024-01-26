@@ -1,3 +1,8 @@
+import { BellOutlineIcon } from "../assets/icons/BellOutline";
+import { CalendarIcon } from "../assets/icons/Calendar";
+import { Search } from "../assets/icons/Search";
+import userDp from "../assets/images/userdp.png";
+
 const Header = ({ navOpen, setNavOpen }) => {
   return (
     <div className="border-b bg-[#fafafa] z-30 p-2 lg:px-4   text-[#26282c] sticky top-0">
@@ -12,7 +17,7 @@ const Header = ({ navOpen, setNavOpen }) => {
           <h2 className="text-[#26282c] text-xl font-bold">Dashboard</h2>
           <div className="relative hidden lg:flex items-center ">
             <button className="w-8 h-8 absolute flex justify-center items-center rounded-full  m-1">
-              <img src="./src/assets/icons/search.svg" />
+              <Search />
             </button>
             <input
               type="search"
@@ -25,19 +30,16 @@ const Header = ({ navOpen, setNavOpen }) => {
         </div>
         <div className="lg:col-span-5 justify-end flex gap-4">
           <div className="hidden lg:flex gap-4 items-center">
-            <p className="capitalize text-xs">
-              <img
-                src="./src/assets/icons/calendar.svg"
-                className="inline px-2"
-              />
-              november, 15 2023
-            </p>
+            <div className="capitalize flex items-center gap-2 text-xs">
+              <CalendarIcon />
+              <p>november, 15 2023</p>
+            </div>
             <div className="p-3 border rounded-full">
-              <img src="./src/assets/icons/bell-outline.svg" />
+              <BellOutlineIcon />
             </div>
           </div>
           <div className="p-1 rounded-full border text-xs items-center flex">
-            <img src="/src/assets/images/userdp.png" className="h-8 w-8" />
+            <img src={userDp} className="h-8 w-8" />
             <div className="px-2 text-right hidden lg:block">
               <p>justin bergerson</p>
               <p>justin@gmail.com</p>
