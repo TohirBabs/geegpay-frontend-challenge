@@ -10,7 +10,7 @@ const Header = ({ navOpen, setNavOpen , darkMode}) => {
 
   const date = time.toLocaleDateString('en-us', { day:"2-digit", year:"numeric", month:"long"});
   return (
-    <div className="border-b dark:border-[#34caa5]/10 bg-[#fafafa]/50 dark:bg-[#0e0f0f]/80 backdrop-blur-sm transition z-30 p-2 lg:px-4 dark:text-[#fff]  text-[#26282c] sticky top-0">
+    <div className="border-b dark:border-[#34caa5]/10 bg-[#fafafa]/50 dark:bg-[#0e0f0f]/80 backdrop-blur-sm transition z-50 p-2 lg:px-4 dark:text-[#fff]  text-[#26282c] sticky top-0">
       <div className="lg:grid grid-cols-12 gap-8 flex justify-between items-center">
         <div className="lg:col-span-7 flex justify-between items-center">
           <img
