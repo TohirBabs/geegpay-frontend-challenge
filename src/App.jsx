@@ -4,6 +4,10 @@ import { Platorm } from "./components/Platorm";
 import { Table } from "./components/Table";
 import { TrendCard } from "./components/TrendCard";
 import Layout from "./layouts/Layout";
+import { BoxTickIcon } from "./assets/icons/BoxTick";
+import { Rotate3d } from "./assets/icons/Rotate3d";
+import { ShoppingCartIcon } from "./assets/icons/ShoppingCart";
+import { CoinsIcon } from "./assets/icons/Coins";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -11,28 +15,28 @@ function App() {
   const cardData = [
     {
       trendUp: true,
-      icon: "box-tick",
+      icon: <BoxTickIcon/>,
       title: "total order",
       quantity: "350",
       percent: 23.5,
     },
     {
       trendUp: false,
-      icon: "3d-rotate",
+      icon: <Rotate3d/>,
       title: "total refund",
       quantity: "270",
       percent: 23.5,
     },
     {
       trendUp: true,
-      icon: "shopping-cart",
+      icon: <ShoppingCartIcon/>,
       title: "average sales",
       quantity: "1567",
       percent: 23.5,
     },
     {
       trendUp: false,
-      icon: "coin",
+      icon: <CoinsIcon/>,
       title: "total income",
       quantity: "$350.000",
       percent: 23.5,
