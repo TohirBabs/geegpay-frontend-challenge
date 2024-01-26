@@ -43,11 +43,11 @@ const Header = ({ navOpen, setNavOpen , darkMode}) => {
               <BellOutlineIcon color={ darkMode ? "#fff":"#0D062D" } />
             </div>
           </div>
-          <div className="p-1 rounded-full border text-xs items-center flex">
-            <img src={userDp} className="h-8 w-8" />
+          <div className="p-1 lg:pr-3 rounded-full border dark:border-[#dadddd] text-sm  items-center flex">
+            <img src={userDp} className="h-10 w-10" />
             <div className="px-2 text-right hidden lg:block">
-              <p>justin bergerson</p>
-              <p>justin@gmail.com</p>
+              <p className="capitalize">justin bergerson</p>
+              <p className="text-[#787486] text-[0.75rem]">justin@gmail.com</p>
             </div>
           </div>
         </div>

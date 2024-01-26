@@ -28,10 +28,12 @@ const Sidebar = ({ navOpen, darkMode, setDarkMode }) => {
   return (
     <div
       style={{ left: navOpen ? "0" : "-100%" }}
-      className="flex z-40 flex-col items-center h-screen lg:p-3 p-2 gap-6 bg-[#f7f8fa] dark:bg-[#191a19] pb-8 lg:pb-8 lg:sticky absolute lg:left-0 transition-all  top-0  border lg:border-none"
+      className="flex z-40 flex-col items-center h-screen lg:p-3 p-2 gap-6 bg-[#f7f8fa] dark:bg-[#191a19] pb-8 lg:pb-8 lg:sticky  absolute lg:left-0 transition-all  top-0  border lg:border-none"
     >
       <img src="/logo.svg" className="w-10" alt="site logo" />
-      <div className="flex flex-col  flex-1 items-center justify-between">
+              <div className="w-1 h-6 absolute right-0 top-[5.2rem] rounded-l bg-[#0d062d] dark:bg-[#fff]"></div>
+
+      <div className="flex flex-col relative flex-1 items-center justify-between">
         <ul className="flex flex-col items-center gap-1 ">
           {navItems.map(
             (nav, index) =>
@@ -48,11 +50,19 @@ const Sidebar = ({ navOpen, darkMode, setDarkMode }) => {
               }}
               className="w-8 h-8 bg-[#34caa5]  rounded-full absolute transition-all"
             ></div>
-            <button onClick={() => setDarkMode(false)} className="z-10">
+            <button onClick={() => setDarkMode(false)} className="z-10 group relative">
               <Brightness color={darkMode ? "#B2ABAB" : "#fff"} />
+              <span className="group-hover:visible invisible absolute z-10 left-[140%] text-sm -top-[50%] after:absolute after:top-[50%] after:right-[100%] after:-mt-[5px] after:border-r-[#26282c] after:border-transparent after:border-[5px] w-28 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
+          light mode
+          </span>
+
             </button>
-            <button onClick={() => setDarkMode(true)} className="z-10">
+            <button onClick={() => setDarkMode(true)} className="z-10 group relative">
               <Moon color={darkMode ? "#fff" : "#b2abab"} />
+              <span className="group-hover:visible invisible absolute z-10 left-[140%] text-sm -top-[50%] after:absolute after:top-[50%] after:right-[100%] after:-mt-[5px] after:border-r-[#26282c] after:border-transparent after:border-[5px] w-28 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
+            dark mode
+          </span>
+
             </button>
           </div>
         </ul>

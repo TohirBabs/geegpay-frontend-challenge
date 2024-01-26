@@ -3,16 +3,16 @@ import React from "react";
 export const BarChart = () => {
   const salesData = [
     { month: "jan", sales: 22 },
-    { month: "feb", sales: 18 },
-    { month: "mar", sales: 9 },
+    { month: "feb", sales: 42 },
+    { month: "mar", sales: 30 },
     { month: "apr", sales: 25 },
-    { month: "may", sales: 16 },
-    { month: "jun", sales: 30 },
+    { month: "may", sales: 18 },
+    { month: "jun", sales: 35 },
     { month: "jul", sales: 20 },
     { month: "aug", sales: 50 },
     { month: "sep", sales: 35 },
-    { month: "oct", sales: 31 },
-    { month: "nov", sales: 12 },
+    { month: "oct", sales: 41 },
+    { month: "nov", sales: 25 },
     { month: "dec", sales: 26 },
   ];
   return (
@@ -24,7 +24,7 @@ export const BarChart = () => {
           </p>
           <div className="flex items-center gap-2 text-sm">
             <p>sort by:</p>
-            <div className="p-1 px-2 rounded-full border">weekly</div>
+            <div className="p-1 px-2 rounded-full border">monthly</div>
           </div>
         </div>
         <div className="flex lg:gap-8 gap-4 text-xs relative">
@@ -58,7 +58,7 @@ export const BarChart = () => {
             {salesData.map((data, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-2 relative bottom-0"
+                className="flex flex-col items-center md:gap-2 relative bottom-0"
               >
                 <div
                   style={{ height: `${(data.sales / 50) * 18 - 2}rem` }}
@@ -70,7 +70,7 @@ export const BarChart = () => {
                 </div>
                 <div
                   style={{ height: `${(data.sales / 50) * 12 - 2}rem` }}
-                  className="lg:w-7 w-[4vw] lg:hidden  rounded-t-full bg-[#34caa5]/50"
+                  className="lg:w-7 w-[5vw] lg:hidden  rounded-t-full bg-[#34caa5]/50"
                 ></div>
                 <p className="text-[#52525]">{data.month}</p>
               </div>
