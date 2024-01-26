@@ -8,8 +8,11 @@ import { BoxTickIcon } from "./assets/icons/BoxTick";
 import { Rotate3d } from "./assets/icons/Rotate3d";
 import { ShoppingCartIcon } from "./assets/icons/ShoppingCart";
 import { CoinsIcon } from "./assets/icons/Coins";
+import { useRef } from "react";
 
 function App() {
+
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
   const [darkMode, setDarkMode] = useState(false);
 
   const cardData = [
@@ -44,6 +47,7 @@ function App() {
   ];
 
   return (
+    
     <Layout darkMode={darkMode} setDarkMode={setDarkMode} >
       <div className="flex flex-col bg-[#f5f5f5] transition dark:bg-[#0e0f0f] lg:gap-5 gap-2 lg:p-5 p-2">
         <div className="flex flex-col-reverse lg:flex-row lg:gap-5 gap-3">
@@ -60,6 +64,7 @@ function App() {
         </div>
       </div>
     </Layout>
+    
   );
 }
 
