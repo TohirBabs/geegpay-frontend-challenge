@@ -37,7 +37,7 @@ export const Table = () => {
 
   const TableRow = ({ data }) => {
     return (
-      <tr className="h-14 border-t capitalize">
+      <tr className="md:h-14 h-12 border-t capitalize">
         <td>
           <img
             src={`/src/assets/images/${data.name}.png`}
@@ -69,10 +69,10 @@ export const Table = () => {
     );
   };
   return (
-    <div className=" text-[#26282c]">
-      <div className="p-4 border rounded-2xl bg-[#fff] flex flex-col gap-5 h-max md:w-[55vw]">
+    <div className=" text-[#26282c]  overflow-x-scroll md:overflow-hidden w-[95vw] md:w-[55vw]">
+      <div className="p-3 md:p-4 border rounded-2xl bg-[#fff] flex flex-col md:gap-5 gap-3 h-max min-w-[700px] ">
         <div className="flex items-center justify-between">
-          <p className="capitalize text-[#26282c] text-xl font-semibold">
+          <p className="capitalize text-[#26282c] md:text-xl text-lg font-semibold">
             latest orders
           </p>
           <button className="text-[#34caa5] px-3">see all</button>
@@ -82,7 +82,7 @@ export const Table = () => {
             <tr>
               {headers.map((header, index) => (
                 <th
-                  className="text-left text-[#9ca4ab] capitalize font-semibold h-14"
+                  className="text-left text-[#9ca4ab] capitalize font-semibold md:h-14 h-12"
                   key={index}
                 >
                   {header}

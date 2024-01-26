@@ -50,7 +50,7 @@ export const Platorm = ({}) => {
   };
 
   return (
-    <div className=" text-[#26282c] w-full">
+    <div className=" text-[#26282c]  flex-1">
       <div className="p-4 border rounded-2xl bg-[#fff] flex flex-col gap-5 ">
         <div className="flex items-center justify-between">
           <p className="capitalize text-[#26282c] text-lg font-semibold">

@@ -2,7 +2,7 @@ import React from "react";
 
 export const TrendCard = ({ data }) => {
   return (
-    <div className="border rounded-xl p-3 shadow-sm bg-[#fff] md:flex-1 w-max h-max flex flex-col gap-2 text-[#26282c]">
+    <div className="border rounded-xl p-3 shadow-sm bg-[#fff] md:flex-1 md:w-max w-full h-max flex flex-col gap-2 text-[#26282c]">
       <div className="flex justify-between items-center">
         <div className="p-2 border rounded-full ">
           <img src={`/src/assets/icons/${data.icon}.svg`} />
