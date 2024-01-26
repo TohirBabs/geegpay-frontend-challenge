@@ -47,7 +47,7 @@ export const Table = () => {
 
   const TableRow = ({ data }) => {
     return (
-      <tr className="lg:h-14 h-12 border-t text-sm capitalize">
+      <tr className="lg:h-14 h-12 border-t dark:border-[#fff]/30 text-sm capitalize">
         <td className="text-[#3a3f51] dark:text-[#fff] font-semibold ">
           <img src={data.img} alt="" className="inline mr-2 align-middle" />
           {data.name}
