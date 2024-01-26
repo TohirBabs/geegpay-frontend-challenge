@@ -14,7 +14,7 @@ import { Moon } from "../assets/icons/Moon";
 
 const Sidebar = ({ navOpen, darkMode, setDarkMode }) => {
   const navItems = [
-    { title: "category", icon: <Category /> },
+    { title: "category", icon: <Category color={ darkMode ? "#fff":"#0D062D" } /> },
     { title: "trends", icon: <TrendUp /> },
     { title: "users", icon: <Profile2User /> },
     { title: "box", icon: <Box /> },
@@ -61,7 +61,7 @@ const Sidebar = ({ navOpen, darkMode, setDarkMode }) => {
             (nav, index) =>
               index >= 7 && (
                 <li key={index}>
-                  <NavButton navItem={nav} />
+                  <NavButton navItem={nav} darkMode={ darkMode} />
                 </li>
               )
           )}

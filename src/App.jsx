@@ -55,7 +55,7 @@ function App() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row lg:gap-5 gap-3">
-          <Table />
+          <Table darkMode={ darkMode} />
           <Platorm />
         </div>
       </div>

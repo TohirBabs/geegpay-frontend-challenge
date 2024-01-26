@@ -4,8 +4,9 @@ import jaydon from "../assets/images/jaydon.png";
 import corey from "../assets/images/corey.png";
 import cooper from "../assets/images/cooper.png";
 import phillip from "../assets/images/phillip.png";
+import { DocDownloadIcon } from "../assets/icons/DocDownload";
 
-export const Table = () => {
+export const Table = ({darkMode}) => {
   const headers = ["name", "date", "amount", "status", "invoice"];
   const tableData = [
     {
@@ -62,13 +63,9 @@ export const Table = () => {
           <p>{data.status}</p>
         </td>
         <td>
-          <button className="p-2 py-1 rounded-full hover:bg-[#26282c]/10">
-            <img
-              src="/src/assets/icons/document-download.svg"
-              alt=""
-              className="inline mr-2"
-            />
-            view
+          <button className="p-2 py-1 rounded-full flex gap-1 items-center hover:bg-[#26282c]/10">
+            <DocDownloadIcon color={ darkMode ? "#fff":"#292D32"} />
+            <p>view</p>
           </button>
         </td>
       </tr>
