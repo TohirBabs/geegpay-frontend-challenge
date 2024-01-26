@@ -16,8 +16,8 @@ export const BarChart = () => {
     { month: "dec", sales: 26 },
   ];
   return (
-    <div className=" text-[#26282c]">
-      <div className="md:p-4 p-2 border rounded-2xl bg-[#fff] flex flex-col gap-6 h-max md:w-[55vw] w-full">
+    <div className=" text-[#26282c] ">
+      <div className="lg:p-4 p-2 border rounded-2xl bg-[#fff] flex flex-col lg:gap-6 gap-3 shadow h-max lg:w-[55vw] w-full">
         <div className="flex items-center justify-between">
           <p className="capitalize text-[#26282c] text-xl font-semibold">
             sales trends
@@ -27,8 +27,8 @@ export const BarChart = () => {
             <div className="p-1 px-2 rounded-full border">weekly</div>
           </div>
         </div>
-        <div className="flex md:gap-8 gap-4 text-xs relative">
-          <div className="md:flex flex-col hidden  pb-4 justify-between">
+        <div className="flex lg:gap-8 gap-4 text-xs relative">
+          <div className="lg:flex flex-col hidden  pb-4 justify-between">
             <div className="flex items-center gap-4">
               <p>50.0</p>
               <div className="w-[92%] absolute left-[8%] border-t border-dashed"></div>
@@ -54,7 +54,7 @@ export const BarChart = () => {
               <div className="w-[92%] absolute left-[8%] border-t border-dashed"></div>
             </div>
           </div>
-          <div className="flex flex-1 justify-between items-end text-[#525252] capitalize relative z-20 md:h-72 h-40">
+          <div className="flex flex-1 justify-between items-end text-[#525252] capitalize relative z-20 lg:h-72 h-40">
             {salesData.map((data, index) => (
               <div
                 key={index}
@@ -62,7 +62,7 @@ export const BarChart = () => {
               >
                 <div
                   style={{ height: `${(data.sales / 50) * 18 - 2}rem` }}
-                  className="group md:w-8 w-3 hidden md:block rounded-t-full bg-[#34caa5]/20 hover:bg-gradient-to-b hover:from-[#34caa5] hover:to-[#34caa5]/10 hover:to-70% cursor-pointer"
+                  className="group lg:w-8 w-3 hidden lg:block rounded-t-full bg-[#34caa5]/20 hover:bg-gradient-to-b hover:from-[#34caa5] hover:to-[#34caa5]/10 hover:to-70% cursor-pointer"
                 >
                   <span className="group-hover:visible invisible absolute z-10 -left-[50%] -top-10 after:absolute after:top-[100%] after:left-[50%] after:-mt-[5px] after:border-b-[#26282c] after:border-transparent after:border-[5px] w-20 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
                     {data.sales}
@@ -70,9 +70,9 @@ export const BarChart = () => {
                 </div>
                 <div
                   style={{ height: `${(data.sales / 50) * 9 - 2}rem` }}
-                  className="md:w-7 w-3 md:hidden  rounded-t-full bg-[#34caa5]/50"
+                  className="lg:w-7 w-3 lg:hidden  rounded-t-full bg-[#34caa5]/50"
                 ></div>
-                <p>{data.month}</p>
+                <p className="text-[#52525]">{data.month}</p>
               </div>
             ))}
           </div>

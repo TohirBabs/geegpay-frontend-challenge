@@ -37,8 +37,8 @@ export const Table = () => {
 
   const TableRow = ({ data }) => {
     return (
-      <tr className="md:h-14 h-12 border-t capitalize">
-        <td>
+      <tr className="lg:h-14 h-12 border-t text-sm capitalize">
+        <td className="text-[#3a3f51] font-semibold ">
           <img
             src={`/src/assets/images/${data.name}.png`}
             alt=""
@@ -46,12 +46,12 @@ export const Table = () => {
           />
           {data.name}
         </td>
-        <td className="text-[#737373] text-sm">{data.date}</td>
-        <td className="text-[#0d062d]">${data.amount}</td>
+        <td className="text-[#737373] ">{data.date}</td>
+        <td className="text-[#0d062d] font-medium ">${data.amount}</td>
         {/* <FormattedDate date={data.createdAt} /> */}
         <td
           style={{ color: data.status === "paid" ? "#34caa5" : "#ed544e" }}
-          className=""
+          className="text-sm"
         >
           <p>{data.status}</p>
         </td>
@@ -69,20 +69,22 @@ export const Table = () => {
     );
   };
   return (
-    <div className=" text-[#26282c]  overflow-x-scroll md:overflow-hidden w-[95vw] md:w-[55vw]">
-      <div className="p-3 md:p-4 border rounded-2xl bg-[#fff] flex flex-col md:gap-5 gap-3 h-max min-w-[700px] ">
+    <div className=" text-[#26282c]   overflow-x-scroll lg:overflow-hidden w-[95vw] md:w-[98vw] lg:w-[55vw]">
+      <div className="p-3 lg:p-4 border  rounded-2xl bg-[#fff] flex flex-col lg:gap-5 gap-3 h-max min-w-[600px] ">
         <div className="flex items-center justify-between">
-          <p className="capitalize text-[#26282c] md:text-xl text-lg font-semibold">
+          <p className="capitalize text-[#26282c] lg:text-xl text-lg font-semibold">
             latest orders
           </p>
-          <button className="text-[#34caa5] px-3">see all</button>
+          <button className="text-[#34caa5] px-3 hover:bg-[#34caa5]/10 p-1 rounded-full">
+            see all
+          </button>
         </div>
         <table>
           <thead>
             <tr>
               {headers.map((header, index) => (
                 <th
-                  className="text-left text-[#9ca4ab] capitalize font-semibold md:h-14 h-12"
+                  className="text-left text-[#9ca4ab] capitalize font-medium h-12"
                   key={index}
                 >
                   {header}

@@ -41,16 +41,16 @@ function App() {
 
   return (
     <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
-      <div className="flex flex-col md:gap-5 gap-3 md:p-5 p-2">
-        <div className="flex flex-col md:flex-row md:gap-5 gap-3">
+      <div className="flex flex-col lg:gap-5 gap-2 lg:p-5 p-2">
+        <div className="flex flex-col-reverse lg:flex-row lg:gap-5 gap-3">
           <BarChart />
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap lg:gap-3 gap-2">
             {cardData.map((data, index) => (
               <TrendCard key={index} data={data} />
             ))}
           </div>
         </div>
-        <div className="flex flex-col md:flex-row  gap-3">
+        <div className="flex flex-col lg:flex-row lg:gap-5 gap-3">
           <Table />
           <Platorm />
         </div>
