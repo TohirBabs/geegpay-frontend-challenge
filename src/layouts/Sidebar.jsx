@@ -28,7 +28,7 @@ const Sidebar = ({ navOpen, darkMode, setDarkMode }) => {
   return (
     <div
       style={{ left: navOpen ? "0" : "-100%" }}
-      className="flex z-10 flex-col items-center h-screen lg:p-3 p-2 gap-6 bg-[#f7f8fa] pb-8 lg:pb-8 lg:sticky absolute lg:left-0 transition-all  top-0  border lg:border-none"
+      className="flex z-10 flex-col items-center h-screen lg:p-3 p-2 gap-6 bg-[#f7f8fa] dark:bg-[#191a19] pb-8 lg:pb-8 lg:sticky absolute lg:left-0 transition-all  top-0  border lg:border-none"
     >
       <img src="/logo.svg" className="w-10" alt="site logo" />
       <div className="flex flex-col  flex-1 items-center justify-between">
@@ -41,12 +41,12 @@ const Sidebar = ({ navOpen, darkMode, setDarkMode }) => {
                 </li>
               )
           )}
-          <div className="p-3 gap-6 flex flex-col items-center relative rounded-full bg-[#fff]">
+          <div className="p-3 gap-6 flex flex-col items-center relative rounded-full transition dark:bg-[#000] bg-[#fff]">
             <div
               style={{
                 top: `${darkMode ? "3.3" : "0.5"}rem`,
               }}
-              className="w-8 h-8 bg-[#34caa5] rounded-full absolute transition-all"
+              className="w-8 h-8 bg-[#34caa5]  rounded-full absolute transition-all"
             ></div>
             <button onClick={() => setDarkMode(false)} className="z-10">
               <Brightness color={darkMode ? "#B2ABAB" : "#fff"} />

@@ -75,10 +75,10 @@ export const Table = () => {
     );
   };
   return (
-    <div className=" text-[#26282c]   overflow-x-scroll lg:overflow-hidden w-[95vw] md:w-[98vw] lg:w-[55vw]">
-      <div className="p-3 lg:p-4 border  rounded-2xl bg-[#fff] flex flex-col lg:gap-5 gap-3 h-max min-w-[600px] ">
+    <div className=" text-[#26282c]  dark:text-[#fff] overflow-x-scroll lg:overflow-hidden w-[95vw] md:w-[98vw] lg:w-[55vw]">
+      <div className="p-3 lg:p-4 border  rounded-2xl bg-[#fff] transition dark:bg-[#1e2020] dark:border-[#34caa5]/10 flex flex-col lg:gap-5 gap-3 h-max min-w-[600px] ">
         <div className="flex items-center justify-between">
-          <p className="capitalize text-[#26282c] lg:text-xl text-lg font-semibold">
+          <p className="capitalize text-[#26282c] dark:text-[#fff] lg:text-xl text-lg font-semibold">
             latest orders
           </p>
           <button className="text-[#34caa5] px-3 hover:bg-[#34caa5]/10 p-1 rounded-full">

@@ -44,8 +44,8 @@ function App() {
   ];
 
   return (
-    <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
-      <div className="flex flex-col lg:gap-5 gap-2 lg:p-5 p-2">
+    <Layout darkMode={darkMode} setDarkMode={setDarkMode} >
+      <div className="flex flex-col bg-[#f5f5f5] transition dark:bg-[#0e0f0f] lg:gap-5 gap-2 lg:p-5 p-2">
         <div className="flex flex-col-reverse lg:flex-row lg:gap-5 gap-3">
           <BarChart />
           <div className="flex flex-wrap lg:gap-3 gap-2">

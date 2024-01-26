@@ -35,7 +35,7 @@ export const Platorm = ({}) => {
     return (
       <div className="flex flex-col gap-2">
         <p className="capitalize font-semibold">{data.title}</p>
-        <div className="rounded-full h-2 bg-[#f5f5f5]">
+        <div className="rounded-full h-3 bg-[#f5f5f5] transition dark:bg-[#111111] p-[1px]">
           <div
             style={{ width: `${data.progress}%`, background: data.color }}
             className="w-1/2 h-full bg-[#6160dc] rounded-full"
@@ -51,12 +51,14 @@ export const Platorm = ({}) => {
 
   return (
     <div className=" text-[#26282c]   flex-1">
-      <div className="p-4 border shadow-md rounded-2xl bg-[#fff] flex flex-col gap-5 ">
+      <div className="p-4 border shadow-md rounded-2xl bg-[#fff] transition dark:bg-[#1e2020] dark:border-[#34caa5]/10 dark:text-[#fff] flex flex-col gap-5 ">
         <div className="flex items-center justify-between">
-          <p className="capitalize text-[#26282c] text-lg font-semibold">
+          <p className="capitalize text-[#26282c] dark:text-[#fff] text-lg font-semibold">
             top platforms
           </p>
-          <p>see all</p>
+            <button className="text-[#34caa5] px-3 hover:bg-[#34caa5]/10 p-1 rounded-full">
+            see all
+          </button>
         </div>
         <div className="flex flex-col gap-4">
           {platformData.map((data, index) => (
