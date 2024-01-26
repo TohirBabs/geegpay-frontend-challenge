@@ -53,7 +53,7 @@ export const Table = () => {
           {data.name}
         </td>
         <td className="text-[#737373] ">{data.date}</td>
-        <td className="text-[#0d062d] font-medium ">${data.amount}</td>
+        <td className="text-[#0d062d] font-medium dark:text-[#3399ff]">${data.amount}</td>
         {/* <FormattedDate date={data.createdAt} /> */}
         <td
           style={{ color: data.status === "paid" ? "#34caa5" : "#ed544e" }}

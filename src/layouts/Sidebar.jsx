@@ -28,7 +28,7 @@ const Sidebar = ({ navOpen, darkMode, setDarkMode }) => {
   return (
     <div
       style={{ left: navOpen ? "0" : "-100%" }}
-      className="flex z-10 flex-col items-center h-screen lg:p-3 p-2 gap-6 bg-[#f7f8fa] dark:bg-[#191a19] pb-8 lg:pb-8 lg:sticky absolute lg:left-0 transition-all  top-0  border lg:border-none"
+      className="flex z-40 flex-col items-center h-screen lg:p-3 p-2 gap-6 bg-[#f7f8fa] dark:bg-[#191a19] pb-8 lg:pb-8 lg:sticky absolute lg:left-0 transition-all  top-0  border lg:border-none"
     >
       <img src="/logo.svg" className="w-10" alt="site logo" />
       <div className="flex flex-col  flex-1 items-center justify-between">
