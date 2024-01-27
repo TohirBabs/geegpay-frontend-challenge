@@ -37,7 +37,7 @@ function App() {
   }, []);
   const [darkMode, setDarkMode] = useState(false);
   const [activePage, setActivePage] = useState("overview");
-  const mobile = windowSize.width < 1000;
+  const mobile = windowSize.width < 1200;
   const cardData = [
     {
       trendUp: true,
@@ -94,7 +94,7 @@ function App() {
         </div>
       ) : (
         <div className="flex flex-col gap-2 text-[#26282c] p-5 text-2xl flex-1 items-center justify-center">
-          <img src={construction} alt="" className="h-[70vh]" />
+          <img src={construction} alt="" className="h-[50vh]" />
           <p
             style={{
               color: darkMode ? "#fff" : "#26282c",
