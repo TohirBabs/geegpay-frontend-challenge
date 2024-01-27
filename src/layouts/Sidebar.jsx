@@ -272,9 +272,9 @@ const Sidebar = ({
             <div
               style={{
                 top: darkMode ? "3.3rem" : "0.5rem",
-                width: isCollapsed ? "2rem" : "150px",
+                width: isCollapsed ? "1.9rem" : "150px",
               }}
-              className=" h-8 bg-[#34caa5]  rounded-full absolute transition-all"
+              className=" h-[1.9rem] bg-[#34caa5]  rounded-full absolute transition-all"
             ></div>
             <button
               onClick={() => setDarkMode(false)}
