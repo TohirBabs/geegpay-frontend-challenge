@@ -40,6 +40,7 @@ const Layout = ({
               setNavClosed={setNavClosed}
               darkMode={darkMode}
               activePage={activePage}
+              mobile={mobile}
             />
             {children}
           </div>

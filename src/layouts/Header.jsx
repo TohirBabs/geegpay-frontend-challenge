@@ -5,7 +5,7 @@ import { SearchIcon } from "../assets/icons/Search";
 import userdp from "../assets/images/userdp.png";
 import { GoogleLogin } from "@react-oauth/google";
 
-const Header = ({ navClosed, setNavClosed, darkMode, activePage }) => {
+const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
   const [time, setTime] = useState(new Date());
   const [userData, setUserData] = useState(null);
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
@@ -31,8 +31,8 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage }) => {
   });
   return (
     <div className="border-b dark:border-[#34caa5]/10 bg-[#fafafa]/50 dark:bg-[#0e0f0f]/80 backdrop-blur-sm transition h-[68px] z-40 p-2 lg:px-6 dark:text-[#fff] items-center flex  text-[#26282c] sticky top-0">
-      <div className="lg:grid grid-cols-12 w-full gap-8 flex justify-between items-center">
-        <div className="lg:col-span-7 flex justify-between items-center">
+      <div className=" w-full gap-2 flex justify-between items-center">
+        <div className="lg:w-[55vw] flex justify-between items-center">
           <img
             onClick={() => setNavClosed(!navClosed)}
             src="/logo.svg"
@@ -55,9 +55,9 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage }) => {
             ></input>
           </div>
         </div>
-        <div className="lg:col-span-5 justify-end relative flex gap-4">
-          <div className="hidden lg:flex gap-4 mr-64 items-center">
-            <div className="capitalize flex items-center gap-2 text-xs">
+        <div className="lg:col-span-5 justify-end relative flex gap-2">
+          <div className="flex gap-4 lg:mr-56 mr-10 items-center">
+            <div className="capitalize hidden lg:flex items-center gap-2 text-xs">
               <CalendarIcon color={darkMode ? "#fff" : "#0D062D"} />
               <p>{date}</p>
             </div>
@@ -101,7 +101,7 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage }) => {
                   tohirbabs@gmail.com
                 </p>
               </div>
-              <div className="-rotate-90">
+              <div className="-rotate-90 hidden lg:block">
                 <svg
                   width="24"
                   height="24"
@@ -122,6 +122,7 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage }) => {
             <div
               style={{
                 height: profileMenuOpen ? "9rem" : "0",
+                width: mobile && profileMenuOpen ? "10rem" : "3rem",
                 marginTop: profileMenuOpen ? "0.4rem" : "0",
               }}
               className="transition-all flex flex-col dark:bg-[#111111] bg-gray-100 rounded-3xl   gap-3  "
