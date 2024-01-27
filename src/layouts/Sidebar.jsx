@@ -108,11 +108,11 @@ const Sidebar = ({
       ),
     },
     {
-      title: "arrow right",
+      title: "refresh data",
       icon: (
         <ArrowRight
           color={
-            hoverNav === 6 || activePage === "arrow right"
+            hoverNav === 6 || activePage === "refresh data"
               ? darkMode
                 ? "#fff"
                 : "#0d062d"
@@ -159,7 +159,12 @@ const Sidebar = ({
         <div className="w-[72px] flex justify-center">
           <img src="/logo.svg" className="w-10" alt="site logo" />
         </div>
-        <p className="absolute left-[72px] text-2xl font-bold font-mono">
+        <p
+          style={{
+            color: darkMode ? "#fff" : "#26282c",
+          }}
+          className="absolute left-[72px] text-2xl font-bold font-mono"
+        >
           Geegpay
         </p>
       </a>
@@ -171,7 +176,7 @@ const Sidebar = ({
         <svg
           width="24"
           height="24"
-          viewProducts="0 0 24 24"
+          viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -187,7 +192,7 @@ const Sidebar = ({
 
       <div
         style={{ overflow: isCollapsed ? "visible" : "hidden" }}
-        className="flex flex-col relative flex-1 w-full overflow-hidden   justify-between"
+        className="flex flex-col relative flex-1 w-full   justify-between"
       >
         <div
           style={{
@@ -204,7 +209,7 @@ const Sidebar = ({
                 ? "12.5rem"
                 : activePage === "reports"
                 ? "15.5rem"
-                : activePage === "arrow right"
+                : activePage === "refresh data"
                 ? "0.5rem"
                 : activePage === "settings"
                 ? "3.5rem"
@@ -233,30 +238,57 @@ const Sidebar = ({
                 </li>
               )
           )}
-          <div className="p-3 gap-6 flex flex-col items-center relative rounded-full transition dark:bg-[#000] bg-[#fff] border">
+          <div className="p-2 m-3 max-w-[166px] gap-4 flex flex-col  relative rounded-3xl transition dark:bg-[#000] bg-[#fff] ">
             <div
               style={{
-                top: `${darkMode ? "3.3" : "0.5"}rem`,
+                top: darkMode ? "3.3rem" : "0.5rem",
+                width: isCollapsed ? "2rem" : "150px",
               }}
-              className="w-8 h-8 bg-[#34caa5]  rounded-full absolute transition-all"
+              className=" h-8 bg-[#34caa5]  rounded-full absolute transition-all"
             ></div>
             <button
               onClick={() => setDarkMode(false)}
-              className="z-10 group relative"
+              className="z-10 group relative flex items-center"
             >
-              <Brightness color={darkMode ? "#B2ABAB" : "#fff"} />
-              <span className="group-hover:visible invisible absolute z-10 left-[140%] text-sm -top-[50%] after:absolute after:top-[50%] after:right-[100%] after:-mt-[5px] after:border-r-[#26282c] after:border-transparent after:border-[5px] w-28 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
-                light mode
-              </span>
+              <div className="flex justify-center items-center w-[30px] h-[30px]">
+                <Brightness color={darkMode ? "#B2ABAB" : "#fff"} />
+              </div>
+              {isCollapsed ? (
+                <span className="group-hover:visible invisible absolute z-10 text-sm left-[110%] text-[#fff] top-[0] after:absolute after:top-[50%] after:right-[100%] after:-mt-[5px] after:border-r-[#26282c] after:border-transparent after:border-[5px] w-24 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
+                  light mode
+                </span>
+              ) : (
+                <p
+                  style={{
+                    color: darkMode ? "#B2ABAB" : "#fff",
+                  }}
+                  className="absolute transition left-[40px] text-sm font-medium  "
+                >
+                  light mode
+                </p>
+              )}
             </button>
             <button
               onClick={() => setDarkMode(true)}
-              className="z-10 group relative"
+              className="z-10 group relative flex items-center"
             >
-              <Moon color={darkMode ? "#fff" : "#b2abab"} />
-              <span className="group-hover:visible invisible absolute z-10 left-[140%] text-sm -top-[50%] after:absolute after:top-[50%] after:right-[100%] after:-mt-[5px] after:border-r-[#26282c] after:border-transparent after:border-[5px] w-28 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
-                dark mode
-              </span>
+              <div className="flex justify-center items-center w-[30px] h-[30px]">
+                <Moon color={!darkMode ? "#B2ABAB" : "#fff"} />
+              </div>
+              {isCollapsed ? (
+                <span className="group-hover:visible invisible absolute z-10 text-sm left-[110%] text-[#fff] top-[0] after:absolute after:top-[50%] after:right-[100%] after:-mt-[5px] after:border-r-[#26282c] after:border-transparent after:border-[5px] w-24 rounded-md text-center bg-[#26282c] bg-opacity-80 p-2">
+                  dark mode
+                </span>
+              ) : (
+                <p
+                  style={{
+                    color: !darkMode ? "#B2ABAB" : "#fff",
+                  }}
+                  className="absolute transition left-[40px] text-sm font-medium  "
+                >
+                  dark mode
+                </p>
+              )}
             </button>
           </div>
         </ul>
