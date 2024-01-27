@@ -8,7 +8,6 @@ import twitter from "../assets/icons/twitter.png";
 import linkedin from "../assets/icons/linkedin.png";
 
 
-import { GoogleLogin } from "@react-oauth/google";
 
 const Header = ({
   navClosed,
@@ -96,7 +95,7 @@ const Header = ({
               onClick={() => setProfileMenuOpen(!profileMenuOpen)}
               className="flex items-center"
             >
-              <img src={userdp} className="h-10 w-10" />
+              <img src={userdp} className="h-10 w-10 rounded-full" />
               <div
                 // style={{
                 //   display: mobile && !profileMenuOpen ? "none" : "block",
@@ -140,7 +139,7 @@ const Header = ({
               }}
               className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden  gap-2 "
             >
-              <p className="p-2 px-6  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
+              <p className="p-2 px-6  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 ">
                 connect with me @
               </p>
               <div className="flex gap-2 px-2 items-center justify-center">

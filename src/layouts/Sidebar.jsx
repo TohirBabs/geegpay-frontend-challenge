@@ -276,6 +276,7 @@ const Sidebar = ({
               }}
               className=" h-[1.9rem] bg-[#34caa5]  rounded-full absolute transition-all duration-500"
             ></div>
+
             <button
               onClick={() => setDarkMode(false)}
               className="z-10 group relative flex items-center"
