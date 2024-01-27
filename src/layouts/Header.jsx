@@ -56,7 +56,7 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
           </div>
         </div>
         <div className="lg:col-span-5 justify-end relative flex gap-2">
-          <div className="flex gap-4 lg:mr-56 mr-10 items-center">
+          <div className="flex gap-4  items-center">
             <div className="capitalize hidden lg:flex items-center gap-2 text-xs">
               <CalendarIcon color={darkMode ? "#fff" : "#0D062D"} />
               <p>{date}</p>
@@ -82,7 +82,7 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
               cookiePolicy={"single_host_origin"}
             />
           )} */}
-          <div className="p-1  rounded-[1.6rem] bg-[#fff] dark:bg-[#000]  absolute right-0 lg:-top-1  border dark:border-gray-600/60 text-sm   flex flex-col items-end">
+          <div className="p-1  rounded-[1.6rem] bg-[#fff] dark:bg-[#000]   border dark:border-gray-600/60 text-sm   flex flex-col items-end">
             <button
               onClick={() => setProfileMenuOpen(!profileMenuOpen)}
               className="flex items-center"
