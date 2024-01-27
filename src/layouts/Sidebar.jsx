@@ -73,7 +73,7 @@ const Sidebar = ({
       icon: (
         <Box
           color={
-            hoverNav === 3 || activePage === "Products"
+            hoverNav === 3 || activePage === "Inventory"
               ? darkMode
                 ? "#fff"
                 : "#0d062d"
@@ -233,7 +233,7 @@ const Sidebar = ({
                 ? "3.5rem"
                 : activePage === "customers"
                 ? "6.5rem"
-                : activePage === "Products"
+                : activePage === "inventory"
                 ? "9.5rem"
                 : activePage === "sales"
                 ? "12.5rem"

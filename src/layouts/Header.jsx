@@ -56,13 +56,16 @@ const Header = ({
             ></input>
           </div>
         </div>
-        <div className="lg:col-span-5 justify-end relative flex gap-2">
+        <div className=" justify-end relative flex gap-4">
           <div className="flex gap-4  items-center">
             <div className="capitalize hidden lg:flex items-center gap-2 text-xs">
               <CalendarIcon color={darkMode ? "#fff" : "#0D062D"} />
               <p>{date}</p>
             </div>
-            <button className="p-2 border dark:border-[#fff]/30 rounded-full">
+            <button className="p-2 border bg-[#fff] dark:bg-[#000] relative dark:border-[#fff]/30 rounded-full">
+              <div className="absolute  bg-[#ed544e] rounded-full text-xs text-[#fff] -right-2 -top-2 h-5 w-5 items-center flex justify-center ">
+                3
+              </div>
               <BellOutlineIcon color={darkMode ? "#fff" : "#0D062D"} />
             </button>
           </div>
@@ -130,7 +133,7 @@ const Header = ({
                 height: profileMenuOpen ? "9rem" : "0",
                 width: profileMenuOpen ? "max-content" : "0",
               }}
-              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100/70 backdrop-blur rounded-3xl overflow-hidden  gap-3  "
+              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100/70 backdrop-blur rounded-2 xl overflow-hidden  gap-3  "
             >
               <button className="p-2 px-4  text-left capitalize">
                 edit your profile
