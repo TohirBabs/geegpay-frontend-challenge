@@ -88,12 +88,17 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
               className="flex items-center"
             >
               <img src={userdp} className="h-10 w-10" />
-              <div className="px-1 text-right hidden lg:block">
+              <div
+                style={{
+                  display: mobile && !profileMenuOpen ? "none" : "block",
+                }}
+                className="px-1 text-right hidden lg:block"
+              >
                 <p
                   style={{
                     color: darkMode ? "#fff" : "#26282c",
                   }}
-                  className="capitalize "
+                  className="capitalize"
                 >
                   tohir babatunde
                 </p>
@@ -122,7 +127,7 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
             <div
               style={{
                 height: profileMenuOpen ? "9rem" : "0",
-                width: mobile && profileMenuOpen ? "10rem" : "3rem",
+                width: mobile && !profileMenuOpen ? "3rem" : "220px",
                 marginTop: profileMenuOpen ? "0.4rem" : "0",
               }}
               className="transition-all flex flex-col dark:bg-[#111111] bg-gray-100 rounded-3xl   gap-3  "
