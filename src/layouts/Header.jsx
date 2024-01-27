@@ -5,8 +5,14 @@ import { SearchIcon } from "../assets/icons/Search";
 import userdp from "../assets/images/userdp.png";
 import { GoogleLogin } from "@react-oauth/google";
 
-const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
-  const [time, setTime] = useState(new Date());
+const Header = ({
+  navClosed,
+  setNavClosed,
+  darkMode,
+  activePage,
+  mobile,
+  date,
+}) => {
   const [userData, setUserData] = useState(null);
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
 
@@ -24,11 +30,6 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
     }
   };
 
-  const date = time.toLocaleDateString("en-us", {
-    day: "2-digit",
-    year: "numeric",
-    month: "long",
-  });
   return (
     <div className="border-b dark:border-[#34caa5]/10 bg-[#fafafa]/50 dark:bg-[#0e0f0f]/80 backdrop-blur-sm transition h-[68px] z-40 p-2 lg:px-6 dark:text-[#fff] items-center flex  text-[#26282c] sticky top-0">
       <div className=" w-full gap-2 flex justify-between items-center">
@@ -39,8 +40,8 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
             className="w-8 lg:hidden mx-2"
             alt="site logo"
           />
-          <h2 className="text-[#26282c] dark:text-[#fff] text-xl font-bold capitalize">
-            {activePage === "overview" ? "dashboard" : activePage}
+          <h2 className="text-[#26282c] dark:text-[#fff] lg:text-xl text-lg font-bold capitalize">
+            {activePage}
           </h2>
           <div className="relative hidden lg:flex items-center ">
             <button className="w-8 h-8 absolute flex justify-center items-center rounded-full  m-1">
@@ -129,7 +130,7 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
                 height: profileMenuOpen ? "9rem" : "0",
                 width: profileMenuOpen ? "max-content" : "0",
               }}
-              className="transition-all absolute top-12 border flex flex-col dark:bg-[#111111] bg-gray-100/70 backdrop-blur rounded-3xl overflow-hidden  gap-3  "
+              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100/70 backdrop-blur rounded-3xl overflow-hidden  gap-3  "
             >
               <button className="p-2 px-4  text-left capitalize">
                 edit your profile

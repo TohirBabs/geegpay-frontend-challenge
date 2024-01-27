@@ -36,7 +36,7 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
   const [darkMode, setDarkMode] = useState(false);
-  const [activePage, setActivePage] = useState("overview");
+  const [activePage, setActivePage] = useState("dashboard");
   const mobile = windowSize.width < 1200;
   const cardData = [
     {
@@ -77,7 +77,7 @@ function App() {
       setActivePage={setActivePage}
       mobile={mobile}
     >
-      {activePage === "overview" ? (
+      {activePage === "dashboard" ? (
         <div className="flex flex-col bg-[#f5f5f5] transition  dark:bg-[#0a0a0a] gap-4  lg:p-4 p-2">
           <div className="flex flex-col-reverse lg:flex-row gap-4 ">
             <BarChart />
@@ -93,7 +93,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col gap-2 text-[#26282c] p-5 text-2xl flex-1 items-center justify-center">
+        <div className="flex flex-col gap-2 text-[#26282c] p-5 text-2xl flex-1 text-center font-mono items-center justify-center">
           <img src={construction} alt="" className="h-[50vh] animate-bounce " />
           <p
             style={{

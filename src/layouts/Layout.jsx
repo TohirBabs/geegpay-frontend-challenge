@@ -13,6 +13,12 @@ const Layout = ({
   mobile,
 }) => {
   const [navClosed, setNavClosed] = useState(true);
+  const [time, setTime] = useState(new Date());
+  const date = time.toLocaleDateString("en-us", {
+    day: "2-digit",
+    year: "numeric",
+    month: "long",
+  });
   return (
     <GoogleOAuthProvider clientId="292209312605-i2d2m3clt176vp7c1nqon8n21sgmdhvr.apps.googleusercontent.com">
       <div className="max-w-[100vw] ">
@@ -28,6 +34,7 @@ const Layout = ({
             activePage={activePage}
             setActivePage={setActivePage}
             mobile={mobile}
+            date={date}
           />
           <div
             style={{
@@ -41,6 +48,7 @@ const Layout = ({
               darkMode={darkMode}
               activePage={activePage}
               mobile={mobile}
+              date={date}
             />
             {children}
           </div>

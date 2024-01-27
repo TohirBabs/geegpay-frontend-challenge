@@ -11,6 +11,8 @@ import { Logout } from "../assets/icons/Logout";
 import { Brightness } from "../assets/icons/Brightness";
 import { Moon } from "../assets/icons/Moon";
 import { useState } from "react";
+import { SearchIcon } from "../assets/icons/Search";
+import { CalendarIcon } from "../assets/icons/Calendar";
 
 const Sidebar = ({
   isCollapsed,
@@ -20,15 +22,16 @@ const Sidebar = ({
   activePage,
   setActivePage,
   mobile,
+  date,
 }) => {
   const [hoverNav, setHoverNav] = useState(-1);
   const navItems = [
     {
-      title: "overview",
+      title: "dashboard",
       icon: (
         <Category
           color={
-            hoverNav === 0 || activePage === "overview"
+            hoverNav === 0 || activePage === "dashboard"
               ? darkMode
                 ? "#fff"
                 : "#0d062d"
@@ -38,7 +41,7 @@ const Sidebar = ({
       ),
     },
     {
-      title: "trends",
+      title: "analytics",
       icon: (
         <TrendUp
           color={
@@ -66,7 +69,7 @@ const Sidebar = ({
       ),
     },
     {
-      title: "Products",
+      title: "inventory",
       icon: (
         <Box
           color={
@@ -196,6 +199,26 @@ const Sidebar = ({
           />
         </svg>
       </button>
+      {mobile && (
+        <>
+          <div className="capitalize flex items-center gap-1 text-xs">
+            <CalendarIcon color={darkMode ? "#fff" : "#0D062D"} />
+            <p>{date}</p>
+          </div>
+          <div className="relative flex items-center ">
+            <button className="w-8 h-8 absolute flex justify-center items-center rounded-full  m-1">
+              <SearchIcon color={darkMode ? "#fff" : "#78828A"} />
+            </button>
+            <input
+              type="search"
+              className=" rounded-full border border-[#dadddd] dark:border-gray-600/40 dark:bg-[#0e0f0f]/40 bg-[#fff]  h-10 w-56 text-xs pl-10 text-black dark:text-[#fff]"
+              placeholder="search for anything..."
+              name=""
+              id=""
+            ></input>
+          </div>
+        </>
+      )}
 
       <div
         style={{ overflow: isCollapsed ? "visible" : "hidden" }}
@@ -204,9 +227,9 @@ const Sidebar = ({
         <div
           style={{
             top:
-              activePage === "overview"
+              activePage === "dashboard"
                 ? "0.5rem"
-                : activePage === "trends"
+                : activePage === "analytics"
                 ? "3.5rem"
                 : activePage === "customers"
                 ? "6.5rem"
