@@ -1,4 +1,3 @@
-import React from "react";
 import { Category } from "../assets/icons/Category";
 import TrendUp from "../assets/icons/TrendUp";
 import { Profile2User } from "../assets/icons/Profile2User";
