@@ -147,7 +147,7 @@ export const BarChart = () => {
                       style={{ height: `${data.sales * 0.65}rem` }}
                       className="group lg:w-24 w-3 hidden lg:block rounded-t-full bg-[#34caa5]/20 hover:bg-gradient-to-b hover:from-[#34caa5] hover:to-[#34caa5]/10 hover:to-70% cursor-pointer"
                     >
-                      <span className="group-hover:visible invisible absolute z-10 -left-[57%] -top-10  w-20 rounded-md text-center bg-[#26282c] text-[#fff] bg-opacity-90 p-2">
+                      <span className="group-hover:visible invisible absolute z-10 left-[10%] -top-10  w-20 rounded-md text-center bg-[#26282c] text-[#fff] bg-opacity-90 p-2">
                         ${data.sales},000
                       </span>
                     </div>
