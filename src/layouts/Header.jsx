@@ -82,16 +82,16 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
               cookiePolicy={"single_host_origin"}
             />
           )} */}
-          <div className="p-1  rounded-[1.6rem] bg-[#fff] dark:bg-[#000] overflow-hidden absolute right-0 lg:-top-1  border dark:border-gray-600/60 text-sm hover:shadow  flex flex-col">
+          <div className="p-1  rounded-[1.6rem] bg-[#fff] dark:bg-[#000]  absolute right-0 lg:-top-1  border dark:border-gray-600/60 text-sm   flex flex-col items-end">
             <button
               onClick={() => setProfileMenuOpen(!profileMenuOpen)}
               className="flex items-center"
             >
               <img src={userdp} className="h-10 w-10" />
               <div
-                style={{
-                  display: mobile && !profileMenuOpen ? "none" : "block",
-                }}
+                // style={{
+                //   display: mobile && !profileMenuOpen ? "none" : "block",
+                // }}
                 className="px-1 text-right hidden lg:block"
               >
                 <p
@@ -127,10 +127,9 @@ const Header = ({ navClosed, setNavClosed, darkMode, activePage, mobile }) => {
             <div
               style={{
                 height: profileMenuOpen ? "9rem" : "0",
-                width: mobile && !profileMenuOpen ? "3rem" : "220px",
                 marginTop: profileMenuOpen ? "0.4rem" : "0",
               }}
-              className="transition-all flex flex-col dark:bg-[#111111] bg-gray-100 rounded-3xl   gap-3  "
+              className="transition-all absolute top-12 border flex flex-col dark:bg-[#111111] bg-gray-100/70 backdrop-blur rounded-3xl overflow-hidden w-max  gap-3  "
             >
               <button className="p-2 px-4  text-left capitalize">
                 edit your profile
