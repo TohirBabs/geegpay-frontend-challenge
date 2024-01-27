@@ -101,7 +101,7 @@ const Header = ({
                   }}
                   className="capitalize"
                 >
-                  tohir babatunde
+                  tohir babatund
                 </p>
                 <p className="text-[#787486] text-[0.5rem]">
                   tohirbabs@gmail.com
