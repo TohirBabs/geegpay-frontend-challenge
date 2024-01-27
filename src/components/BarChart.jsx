@@ -21,7 +21,7 @@ export const BarChart = () => {
     { week: "week 2", sales: 14 },
     { week: "week 3", sales: 20 },
     { week: "week 4", sales: 16 },
-    { week: "week 5", sales: 0 },
+    { week: "week 5", sales: 3 },
   ];
   return (
     <div className=" text-[#26282c] ">
@@ -32,10 +32,15 @@ export const BarChart = () => {
               sales trends
             </p>
             {sortMonth ? (
-              <span className="p-1 rounded-xl border dark:border-[#f5f5f5]/30 px-4">2023</span>
+              <span className="p-1 rounded-xl border dark:border-[#f5f5f5]/30 px-4">
+                2023
+              </span>
             ) : (
               <span className="p-1 rounded-xl border dark:border-[#f5f5f5]/30 text-xs lg:text-base px-4 ">
-                2024 <span className="font-bold text-[#26282c]">- JAN</span>
+                2024{" "}
+                <span className="font-bold text-[#26282c] dark:text-[#fff]">
+                  - JAN
+                </span>
               </span>
             )}
           </div>
@@ -152,7 +157,7 @@ export const BarChart = () => {
                       </span>
                     </div>
                     <div
-                      style={{ height: `${data.sales * 0.4 }rem` }}
+                      style={{ height: `${data.sales * 0.4}rem` }}
                       className="lg:w-7 w-8 lg:hidden  rounded-t-full bg-[#34caa5]/50"
                     ></div>
                     <p className="text-[#52525]">{data.week}</p>
