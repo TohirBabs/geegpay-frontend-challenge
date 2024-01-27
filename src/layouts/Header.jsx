@@ -3,6 +3,11 @@ import { BellOutlineIcon } from "../assets/icons/BellOutline";
 import { CalendarIcon } from "../assets/icons/Calendar";
 import { SearchIcon } from "../assets/icons/Search";
 import userdp from "../assets/images/panda.png";
+import github from "../assets/icons/github.png";
+import twitter from "../assets/icons/twitter.png";
+import linkedin from "../assets/icons/linkedin.png";
+
+
 import { GoogleLogin } from "@react-oauth/google";
 
 const Header = ({
@@ -130,20 +135,24 @@ const Header = ({
             </button>
             <div
               style={{
-                height: profileMenuOpen ? "8rem" : "0",
+                height: profileMenuOpen ? "6rem" : "0",
                 width: profileMenuOpen ? "max-content" : "0",
               }}
               className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden  gap-2 "
             >
-              <button className="p-2 px-4  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
-                edit your profile
-              </button>
-              <button className="p-2 px-4 text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
-                add another account
-              </button>
-              <button className="p-2 px-4 text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
-                logout of tohir babs
-              </button>
+              <p className="p-2 px-6  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
+                connect with me @
+              </p>
+              <div className="flex gap-2 px-2 items-center justify-center">
+                <a href="https://github.com/TohirBabs">
+                  <img src={ github} className="w-7"/>
+                </a>
+                <a href="https://twitter.com/BabsTohir">
+                  <img src={ twitter} className="w-8"/>
+                </a><a href="https://www.linkedin.com/in/tohir-babs-6a0045167/">
+                  <img src={ linkedin} className="w-8"/>
+                </a>
+              </div>
             </div>
           </div>
         </div>
