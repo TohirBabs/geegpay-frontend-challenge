@@ -130,18 +130,18 @@ const Header = ({
             </button>
             <div
               style={{
-                height: profileMenuOpen ? "9rem" : "0",
+                height: profileMenuOpen ? "8rem" : "0",
                 width: profileMenuOpen ? "max-content" : "0",
               }}
-              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111]/70 bg-gray-100/70 dark:border-gray-600/80 backdrop-blur rounded-2xl overflow-hidden  gap-3  "
+              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden  gap-2 "
             >
-              <button className="p-2 px-4  text-left capitalize">
+              <button className="p-2 px-4  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
                 edit your profile
               </button>
-              <button className="p-2 px-4 text-left capitalize">
+              <button className="p-2 px-4 text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
                 add another account
               </button>
-              <button className="p-2 px-4 text-left capitalize">
+              <button className="p-2 px-4 text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 hover:bg-[#000]/30">
                 logout of tohir babs
               </button>
             </div>
