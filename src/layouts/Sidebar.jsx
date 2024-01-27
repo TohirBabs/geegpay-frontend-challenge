@@ -176,10 +176,10 @@ const Sidebar = ({
         onClick={() => setIsCollapsed((isCollapsed) => !isCollapsed)}
         style={{
           transform: isCollapsed ? "rotate(180deg)" : "rotate(0deg)",
-          top: mobile ? "1.5rem" : "1px",
+          top: mobile ? "1.3rem" : "1px",
           right: mobile ? "1rem" : "-1rem",
         }}
-        className="absolute transition duration-500 top-[1px] -right-4 w-7 h-7 border-2 border-white  bg-gray-600 flex justify-center items-center rounded-lg "
+        className="absolute transition duration-500 top-[1px] -right-4 w-8 h-8 border-2 border-white/50  bg-gray-600 flex justify-center items-center rounded-xl "
       >
         <svg
           width="24"

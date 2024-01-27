@@ -14,7 +14,7 @@ const Layout = ({
 }) => {
   const [navClosed, setNavClosed] = useState(true);
   return (
-    <GoogleOAuthProvider clientId="739106075686-o3iq57fl19qmf50planckptdekklb1du.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="292209312605-i2d2m3clt176vp7c1nqon8n21sgmdhvr.apps.googleusercontent.com">
       <div className="max-w-[100vw] ">
         <div
           // style={{ left: navClosed ? "0" : "-63px" }}
