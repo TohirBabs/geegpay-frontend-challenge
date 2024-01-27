@@ -10,12 +10,34 @@ import { ShoppingCartIcon } from "./assets/icons/ShoppingCart";
 import { CoinsIcon } from "./assets/icons/Coins";
 import construction from "./assets/images/construction.png";
 import { useRef } from "react";
+import { useEffect } from "react";
 
 function App() {
-  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  useEffect(() => {
+    // Function to update window size in the state
+    const updateWindowSize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Initial window size update
+    updateWindowSize();
+
+    // Set up an interval to check window size every second
+    const intervalId = setInterval(updateWindowSize, 1000);
+
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []);
   const [darkMode, setDarkMode] = useState(false);
   const [activePage, setActivePage] = useState("overview");
-
+  const mobile = windowSize.width < 1000;
   const cardData = [
     {
       trendUp: true,
@@ -53,10 +75,11 @@ function App() {
       setDarkMode={setDarkMode}
       activePage={activePage}
       setActivePage={setActivePage}
+      mobile={mobile}
     >
       {activePage === "overview" ? (
-        <div className="flex flex-col bg-[#f5f5f5] transition  dark:bg-[#0e0f0f] lg:gap-5 gap-2 lg:p-5 p-2">
-          <div className="flex flex-col-reverse lg:flex-row lg:gap-5 gap-3">
+        <div className="flex flex-col bg-[#f5f5f5] transition  dark:bg-[#0a0a0a] gap-4  lg:p-4 p-2">
+          <div className="flex flex-col-reverse lg:flex-row gap-4 ">
             <BarChart />
             <div className="flex flex-wrap lg:gap-3 gap-2">
               {cardData.map((data, index) => (
@@ -64,7 +87,7 @@ function App() {
               ))}
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row lg:gap-5 gap-3">
+          <div className="flex flex-col lg:flex-row gap-4 ">
             <Table darkMode={darkMode} />
             <Platorm />
           </div>
@@ -72,7 +95,13 @@ function App() {
       ) : (
         <div className="flex flex-col gap-2 text-[#26282c] p-5 text-2xl flex-1 items-center justify-center">
           <img src={construction} alt="" className="h-[70vh]" />
-          <p>this page is still under construction ... 🚧🏗👷🏼‍♂️</p>
+          <p
+            style={{
+              color: darkMode ? "#fff" : "#26282c",
+            }}
+          >
+            this page is still under construction ... 🚧🏗👷🏼‍♂️
+          </p>
         </div>
       )}
     </Layout>

@@ -9,25 +9,33 @@ const Layout = ({
   setDarkMode,
   activePage,
   setActivePage,
+  mobile,
 }) => {
-  const [navOpen, setNavOpen] = useState(true);
+  const [navClosed, setNavClosed] = useState(true);
   return (
     <div className="max-w-[100vw] ">
       <div
-        // style={{ left: navOpen ? "0" : "-63px" }}
+        // style={{ left: navClosed ? "0" : "-63px" }}
         className={`flex relative transition ${darkMode ? "dark" : ""} `}
       >
         <Sidebar
-          navOpen={navOpen}
+          isCollapsed={navClosed}
+          setIsCollapsed={setNavClosed}
           darkMode={darkMode}
           setDarkMode={setDarkMode}
           activePage={activePage}
           setActivePage={setActivePage}
+          mobile={mobile}
         />
-        <div className="flex flex-col min-h-[100vh] flex-1 border-l bg-[#f5f5f5] transition pl-[74px] dark:bg-[#0e0f0f] dark:border-[#34caa5]/10">
+        <div
+          style={{
+            paddingLeft: mobile ? "0" : "72px",
+          }}
+          className="flex flex-col min-h-[100vh] flex-1 border-l bg-[#f5f5f5] transition  dark:bg-[#0a0a0a] dark:border-[#34caa5]/10"
+        >
           <Header
-            navOpen={navOpen}
-            setNavOpen={setNavOpen}
+            navClosed={navClosed}
+            setNavClosed={setNavClosed}
             darkMode={darkMode}
             activePage={activePage}
           />

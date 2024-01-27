@@ -4,7 +4,7 @@ import { CalendarIcon } from "../assets/icons/Calendar";
 import { SearchIcon } from "../assets/icons/Search";
 import userDp from "../assets/images/userdp.png";
 
-const Header = ({ navOpen, setNavOpen, darkMode, activePage }) => {
+const Header = ({ navClosed, setNavClosed, darkMode, activePage }) => {
   const [time, setTime] = useState(new Date());
 
   const date = time.toLocaleDateString("en-us", {
@@ -17,7 +17,7 @@ const Header = ({ navOpen, setNavOpen, darkMode, activePage }) => {
       <div className="lg:grid grid-cols-12 gap-8 flex justify-between items-center">
         <div className="lg:col-span-7 flex justify-between items-center">
           <img
-            onClick={() => setNavOpen(!navOpen)}
+            onClick={() => setNavClosed(!navClosed)}
             src="/logo.svg"
             className="w-8 lg:hidden mx-2"
             alt="site logo"

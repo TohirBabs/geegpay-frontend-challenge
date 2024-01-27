@@ -14,13 +14,14 @@ import { Moon } from "../assets/icons/Moon";
 import { useState } from "react";
 
 const Sidebar = ({
-  navOpen,
+  isCollapsed,
+  setIsCollapsed,
   darkMode,
   setDarkMode,
   activePage,
   setActivePage,
+  mobile,
 }) => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
   const [hoverNav, setHoverNav] = useState(-1);
   const navItems = [
     {
@@ -152,8 +153,11 @@ const Sidebar = ({
   ];
   return (
     <div
-      style={{ width: isCollapsed ? "72px" : "250px" }}
-      className="flex z-50 flex-col items-center h-screen gap-4 text-[#26282c]   bg-[#f2f6ff]/80 backdrop-blur dark:bg-[#191a19]/80 pb-8 lg:pb-8 fixed   lg:left-0 transition-all  top-0  border-r "
+      style={{
+        width: isCollapsed ? (!mobile ? "72px" : "0") : "250px",
+        overflow: !mobile ? "visible" : "hidden",
+      }}
+      className="flex z-50 flex-col items-center h-screen gap-4 text-[#26282c]   bg-[#f2f6ff]/80 backdrop-blur dark:bg-[#000]/80 pb-8 lg:pb-8 fixed   lg:left-0 transition-all  top-0  border-r dark:border-gray-600 "
     >
       <a className=" relative h-[68px] flex w-full  overflow-hidden items-center">
         <div className="w-[72px] flex justify-center">
