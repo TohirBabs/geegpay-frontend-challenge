@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BellOutlineIcon } from "../assets/icons/BellOutline";
 import { CalendarIcon } from "../assets/icons/Calendar";
 import { SearchIcon } from "../assets/icons/Search";
-import { GoogleLogin } from "react-google-login";
+import { GoogleLogin } from "@react-oauth/google";
 
 const Header = ({ navClosed, setNavClosed, darkMode, activePage }) => {
   const [time, setTime] = useState(new Date());
