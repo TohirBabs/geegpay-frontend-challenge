@@ -86,7 +86,7 @@ const Header = ({
               cookiePolicy={"single_host_origin"}
             />
           )} */}
-          <div className="p-1  rounded-[1.6rem] bg-[#fff] dark:bg-[#000]   border dark:border-gray-600/60 text-sm   flex flex-col items-end">
+          <div className="p-1  rounded-[1.6rem] bg-[#fff] dark:bg-[#000]   border dark:border-gray-600/80 text-sm   flex flex-col items-end">
             <button
               onClick={() => setProfileMenuOpen(!profileMenuOpen)}
               className="flex items-center"
@@ -133,7 +133,7 @@ const Header = ({
                 height: profileMenuOpen ? "9rem" : "0",
                 width: profileMenuOpen ? "max-content" : "0",
               }}
-              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100/70 backdrop-blur rounded-2 xl overflow-hidden  gap-3  "
+              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111]/70 bg-gray-100/70 dark:border-gray-600/80 backdrop-blur rounded-2xl overflow-hidden  gap-3  "
             >
               <button className="p-2 px-4  text-left capitalize">
                 edit your profile
