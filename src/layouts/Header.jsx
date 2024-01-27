@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BellOutlineIcon } from "../assets/icons/BellOutline";
 import { CalendarIcon } from "../assets/icons/Calendar";
 import { SearchIcon } from "../assets/icons/Search";
-import userdp from "../assets/images/userdp.png";
+import userdp from "../assets/images/panda.png";
 import { GoogleLogin } from "@react-oauth/google";
 
 const Header = ({
@@ -106,7 +106,7 @@ const Header = ({
                 >
                   tohir babatunde
                 </p>
-                <p className="text-[#787486] text-[0.5rem]">
+                <p className="text-[#787486] text-[0.7rem]">
                   tohirbabs@gmail.com
                 </p>
               </div>

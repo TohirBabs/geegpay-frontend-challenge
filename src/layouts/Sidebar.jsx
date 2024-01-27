@@ -201,7 +201,7 @@ const Sidebar = ({
       </button>
       {mobile && (
         <>
-          <div className="capitalize flex items-center gap-1 text-xs">
+          <div className="capitalize flex items-center dark:text-[#fff] gap-1 text-xs">
             <CalendarIcon color={darkMode ? "#fff" : "#0D062D"} />
             <p>{date}</p>
           </div>

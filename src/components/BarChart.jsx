@@ -28,19 +28,19 @@ export const BarChart = () => {
       <div className="lg:p-4 p-4 border rounded-2xl bg-[#fff] overflow-hidden max-w-[96vw] dark:bg-[#000] transition dark:border-[#34caa5]/10 dark:text-[#fff] flex flex-col lg:gap-6 gap-3 shadow h-max lg:w-[55vw] w-full">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <p className="capitalize text-[#26282c] dark:text-[#fff] text-xl font-semibold">
+            <p className="capitalize text-[#26282c] dark:text-[#fff] lg:text-xl text-lg font-semibold">
               sales trends
             </p>
             {sortMonth ? (
-              <span className="p-1 rounded-full border px-4">2023</span>
+              <span className="p-1 rounded-2xl border dark:border-[#f5f5f5]/30 px-4">2023</span>
             ) : (
-              <span className="p-1 rounded-full border px-4 uppercase">
+              <span className="p-1 rounded-2xl border dark:border-[#f5f5f5]/30 text-xs lg:text-lg px-4 uppercase">
                 2024 <span className="font-bold text-[#26282c]">- jan</span>
               </span>
             )}
           </div>
 
-          <div className="flex items-center text-sm gap-2 pr-2 bg-[#f5f5f5] dark:bg-[#111111] transition p-1 relative rounded-xl">
+          <div className="flex items-center lg:text-sm text-xs gap-2 pr-2 bg-[#f5f5f5] dark:bg-[#111111] transition p-1 relative rounded-xl">
             <div
               style={{ left: sortMonth ? "4px" : "5rem" }}
               className="w-[4.3rem] h-7 rounded-lg bg-white dark:bg-[#000] border dark:border-[#f5f5f5]/20  absolute transition-all"
@@ -64,59 +64,59 @@ export const BarChart = () => {
             <div className="flex flex-col   pb-4 justify-between">
               <div className="flex items-center gap-4">
                 <p>50,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>40,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>30,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>20,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>10,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>0.0</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
             </div>
           ) : (
-            <div className="flex flex-col   pb-4 justify-between">
+            <div className="flex flex-col  text-xs pb-4 justify-between">
               <div className="flex items-center gap-4">
                 <p>25,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>20,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>15,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>10,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>5,000</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
               <div className="flex items-center gap-4">
                 <p>0.0</p>
-                <div className="w-[92%] absolute left-[8%] border-t border-dashed dark:border-[#34caa5]/10"></div>
+                <div className="w-[88%] absolute left-[12%] border-t border-dashed dark:border-[#34caa5]/10"></div>
               </div>
             </div>
           )}
 
-          <div className="flex flex-1 justify-between items-end text-[#525252] capitalize relative min-w-[600px]  z-20 lg:h-72 h-[13rem]">
+          <div className="flex flex-1 justify-between items-end text-[#525252] capitalize relative  z-20 lg:h-72 h-[13rem]">
             {sortMonth
               ? monthlySalesData.map((data, index) => (
                   <div
@@ -133,7 +133,7 @@ export const BarChart = () => {
                     </div>
                     <div
                       style={{ height: `${(data.sales / 50) * 14 - 2}rem` }}
-                      className="lg:w-7 w-8 lg:hidden  rounded-t-full bg-[#34caa5]/50"
+                      className="lg:w-7 w-[4vw] lg:hidden  rounded-t-full bg-[#34caa5]/50"
                     ></div>
                     <p className="text-[#52525]">{data.month}</p>
                   </div>
@@ -152,7 +152,7 @@ export const BarChart = () => {
                       </span>
                     </div>
                     <div
-                      style={{ height: `${(data.sales / 20) * 2 - 2}rem` }}
+                      style={{ height: `${data.sales * 0.4 }rem` }}
                       className="lg:w-7 w-8 lg:hidden  rounded-t-full bg-[#34caa5]/50"
                     ></div>
                     <p className="text-[#52525]">{data.week}</p>
