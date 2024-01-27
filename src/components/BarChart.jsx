@@ -17,19 +17,29 @@ export const BarChart = () => {
     { month: "dec", sales: 26 },
   ];
   const weeklySalesData = [
-    { week: "week 1", sales: 12 },
-    { week: "week 2", sales: 4 },
-    { week: "week 3", sales: 10 },
-    { week: "week 4", sales: 6 },
+    { week: "week 1", sales: 18 },
+    { week: "week 2", sales: 14 },
+    { week: "week 3", sales: 20 },
+    { week: "week 4", sales: 16 },
     { week: "week 5", sales: 0 },
   ];
   return (
     <div className=" text-[#26282c] ">
       <div className="lg:p-4 p-4 border rounded-2xl bg-[#fff] overflow-hidden max-w-[96vw] dark:bg-[#000] transition dark:border-[#34caa5]/10 dark:text-[#fff] flex flex-col lg:gap-6 gap-3 shadow h-max lg:w-[55vw] w-full">
         <div className="flex items-center justify-between">
-          <p className="capitalize text-[#26282c] dark:text-[#fff] text-xl font-semibold">
-            sales trends
-          </p>
+          <div className="flex items-center gap-2">
+            <p className="capitalize text-[#26282c] dark:text-[#fff] text-xl font-semibold">
+              sales trends
+            </p>
+            {sortMonth ? (
+              <span className="p-1 rounded-full border px-4">2023</span>
+            ) : (
+              <span className="p-1 rounded-full border px-4 uppercase">
+                2024 <span className="font-bold text-[#26282c]">- jan</span>
+              </span>
+            )}
+          </div>
+
           <div className="flex items-center text-sm gap-2 pr-2 bg-[#f5f5f5] dark:bg-[#111111] transition p-1 relative rounded-xl">
             <div
               style={{ left: sortMonth ? "4px" : "5rem" }}
@@ -134,15 +144,15 @@ export const BarChart = () => {
                     className="flex flex-col items-center md:gap-2 relative bottom-0"
                   >
                     <div
-                      style={{ height: `${(data.sales / 20) * 18 - 2}rem` }}
-                      className="group lg:w-8 w-3 hidden lg:block rounded-t-full bg-[#34caa5]/20 hover:bg-gradient-to-b hover:from-[#34caa5] hover:to-[#34caa5]/10 hover:to-70% cursor-pointer"
+                      style={{ height: `${data.sales * 0.65}rem` }}
+                      className="group lg:w-24 w-3 hidden lg:block rounded-t-full bg-[#34caa5]/20 hover:bg-gradient-to-b hover:from-[#34caa5] hover:to-[#34caa5]/10 hover:to-70% cursor-pointer"
                     >
                       <span className="group-hover:visible invisible absolute z-10 -left-[57%] -top-10  w-20 rounded-md text-center bg-[#26282c] text-[#fff] bg-opacity-90 p-2">
                         ${data.sales},000
                       </span>
                     </div>
                     <div
-                      style={{ height: `${(data.sales / 20) * 14 - 2}rem` }}
+                      style={{ height: `${(data.sales / 20) * 2 - 2}rem` }}
                       className="lg:w-7 w-8 lg:hidden  rounded-t-full bg-[#34caa5]/50"
                     ></div>
                     <p className="text-[#52525]">{data.week}</p>
