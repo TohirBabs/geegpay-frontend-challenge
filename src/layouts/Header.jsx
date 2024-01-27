@@ -49,7 +49,7 @@ const Header = ({
             </button>
             <input
               type="search"
-              className=" rounded-full border border-[#dadddd] dark:border-gray-600/80 dark:bg-[#0e0f0f]/40 bg-[#fff]  h-10 w-80 text-xs pl-10 text-black dark:text-[#fff]"
+              className=" rounded-full border border-[#dadddd] dark:border-gray-600/80 transition dark:bg-[#0e0f0f]/40 bg-[#fff]  h-10 w-80 text-xs pl-10 text-black dark:text-[#fff]"
               placeholder="search for anything..."
               name=""
               id=""

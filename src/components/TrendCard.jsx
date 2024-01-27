@@ -5,7 +5,7 @@ import { TrendingDown } from "../assets/icons/TrendingDown";
 
 export const TrendCard = ({ data }) => {
   return (
-    <div className="border cursor-pointer rounded-2xl md:p-3 p-2 shadow hover:shadow-md bg-[#fff] transition dark:bg-[#1e2020] dark:border-[#34caa5]/10 md:flex-1 md:w-max flex-1 h-max flex flex-col md:gap-2 gap-1 text-[#26282c] dark:text-[#e5e6e6]">
+    <div className="border cursor-pointer rounded-2xl md:p-3 p-2 shadow hover:shadow-md bg-[#fff] transition dark:bg-[#000] dark:hover:bg-[#1e2020]/30 dark:border-[#34caa5]/10 md:flex-1 md:w-max flex-1 h-max flex flex-col md:gap-2 gap-1 text-[#26282c] dark:text-[#e5e6e6]">
       <div className="flex justify-between items-center">
         <div className="md:p-2 p-1 border rounded-full dark:border-[#34caa5]/20">
           {data.icon}

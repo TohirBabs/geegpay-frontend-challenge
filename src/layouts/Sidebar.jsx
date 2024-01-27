@@ -268,13 +268,13 @@ const Sidebar = ({
                 </li>
               )
           )}
-          <div className="p-2 m-3 max-w-[166px] gap-4 flex flex-col  relative rounded-3xl transition dark:bg-[#000] bg-[#fff] ">
+          <div className="p-2 m-3 max-w-[166px] gap-4 flex flex-col  relative rounded-3xl transition dark:bg-[#1e2020] bg-[#fff] ">
             <div
               style={{
                 top: darkMode ? "3.3rem" : "0.5rem",
                 width: isCollapsed ? "1.9rem" : "150px",
               }}
-              className=" h-[1.9rem] bg-[#34caa5]  rounded-full absolute transition-all"
+              className=" h-[1.9rem] bg-[#34caa5]  rounded-full absolute transition-all duration-500"
             ></div>
             <button
               onClick={() => setDarkMode(false)}
