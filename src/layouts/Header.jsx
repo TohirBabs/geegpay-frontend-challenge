@@ -90,10 +90,10 @@ const Header = ({
               >
                 <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
                   <img src={corey} className="h-8 w-8 rounded-full" />
-                  <div className="flex flex-col gap-1 text-[#111111]/50">
+                  <div className="flex flex-col gap-1 text-[#111111]/50 dark:text-[#fff]/60">
                     <p>
-                      <span className="font-semibold capitalize text-[#000] text-sm">
-                        corey schleifer{" "}
+                      <span className="font-semibold capitalize text-[#000] dark:text-[#fff] text-sm">
+                        corey schleifer{"  "}
                       </span>
                       confirmed payment
                     </p>
@@ -102,10 +102,10 @@ const Header = ({
                 </button>
                 <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
                   <img src={cooper} className="h-8 w-8 rounded-full" />
-                  <div className="flex flex-col gap-1 text-[#111111]/50">
+                  <div className="flex flex-col gap-1 text-[#111111]/50 dark:text-[#fff]/60">
                     <p>
-                      <span className="font-semibold capitalize text-[#000] text-sm">
-                        cooper press{" "}
+                      <span className="font-semibold capitalize text-[#000] dark:text-[#fff] text-sm">
+                        cooper press{"  "}
                       </span>
                       made a request for price
                     </p>
@@ -114,10 +114,10 @@ const Header = ({
                 </button>
                 <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
                   <img src={phillip} className="h-8 w-8 rounded-full" />
-                  <div className="flex flex-col gap-1 text-[#111111]/50">
+                  <div className="flex flex-col gap-1 text-[#111111]/50 dark:text-[#fff]/60">
                     <p>
-                      <span className="font-semibold capitalize text-[#000] text-sm">
-                        phillip lubin{" "}
+                      <span className="font-semibold capitalize text-[#000] dark:text-[#fff] text-sm">
+                        phillip lubin{"  "}
                       </span>
                       recieved their invoice
                     </p>
