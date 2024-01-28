@@ -36,12 +36,15 @@ const Header = ({
     <div className="border-b dark:border-gray-600/30  bg-[#fafafa]/50 dark:bg-[#0e0f0f]/80 backdrop-blur-sm transition h-[68px] z-40 p-2 lg:px-6 dark:text-[#fff] items-center flex  text-[#26282c] sticky top-0">
       <div className=" w-full gap-2 flex justify-between items-center">
         <div className="lg:w-[55vw] flex justify-between items-center">
-          <img
-            onClick={() => setNavClosed(!navClosed)}
-            src="/logo.svg"
-            className="w-8 lg:hidden mx-2"
-            alt="site logo"
-          />
+          {mobile && (
+            <img
+              onClick={() => setNavClosed(!navClosed)}
+              src="/logo.svg"
+              className="w-8 xl:hidden mx-2"
+              alt="site logo"
+            />
+          )}
+
           <h2 className="text-[#26282c] dark:text-[#fff] lg:text-xl text-lg font-bold capitalize">
             {activePage}
           </h2>
@@ -135,7 +138,7 @@ const Header = ({
                 height: profileMenuOpen ? "6rem" : "0",
                 width: profileMenuOpen ? "max-content" : "0",
               }}
-              className="transition-all absolute top-14 border flex flex-col dark:bg-[#111111] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden  gap-2 "
+              className="transition-all absolute top-14 border flex flex-col dark:bg-[#000] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden  gap-2 "
             >
               <p className="p-2 px-6  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 ">
                 connect with me @

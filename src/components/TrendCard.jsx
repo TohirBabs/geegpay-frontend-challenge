@@ -17,7 +17,7 @@ export const TrendCard = ({ data }) => {
       <p className="md:text-lg text-md dark:text-[#fff] text-[#898989] font-medium capitalize">
         {data.title}
       </p>
-      <p className="md:text-2xl text-xl dark:text-[#fff]/60 font-semibold">
+      <p className="md:text-3xl text-xl dark:text-[#fff]/60 font-semibold">
         {data.quantity}
       </p>
       <div className="flex md:gap-2 gap-1 items-center w-max text-xs">
