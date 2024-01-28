@@ -7,8 +7,6 @@ import github from "../assets/icons/github.png";
 import twitter from "../assets/icons/twitter.png";
 import linkedin from "../assets/icons/linkedin.png";
 
-
-
 const Header = ({
   navClosed,
   setNavClosed,
@@ -35,7 +33,7 @@ const Header = ({
   };
 
   return (
-    <div className="border-b dark:border-[#34caa5]/10 bg-[#fafafa]/50 dark:bg-[#0e0f0f]/80 backdrop-blur-sm transition h-[68px] z-40 p-2 lg:px-6 dark:text-[#fff] items-center flex  text-[#26282c] sticky top-0">
+    <div className="border-b dark:border-gray-600/30  bg-[#fafafa]/50 dark:bg-[#0e0f0f]/80 backdrop-blur-sm transition h-[68px] z-40 p-2 lg:px-6 dark:text-[#fff] items-center flex  text-[#26282c] sticky top-0">
       <div className=" w-full gap-2 flex justify-between items-center">
         <div className="lg:w-[55vw] flex justify-between items-center">
           <img
@@ -144,12 +142,13 @@ const Header = ({
               </p>
               <div className="flex gap-2 px-2 items-center justify-center">
                 <a href="https://github.com/TohirBabs">
-                  <img src={ github} className="w-7"/>
+                  <img src={github} className="w-7" />
                 </a>
                 <a href="https://twitter.com/BabsTohir">
-                  <img src={ twitter} className="w-8"/>
-                </a><a href="https://www.linkedin.com/in/tohir-babs-6a0045167/">
-                  <img src={ linkedin} className="w-8"/>
+                  <img src={twitter} className="w-8" />
+                </a>
+                <a href="https://www.linkedin.com/in/tohir-babs-6a0045167/">
+                  <img src={linkedin} className="w-8" />
                 </a>
               </div>
             </div>

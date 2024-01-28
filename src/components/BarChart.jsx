@@ -25,14 +25,14 @@ export const BarChart = () => {
   ];
   return (
     <div className=" text-[#26282c] ">
-      <div className="lg:p-4 p-4 border rounded-2xl bg-[#fff] overflow-hidden max-w-[96vw] dark:bg-[#000] transition dark:border-[#34caa5]/10 dark:text-[#fff] flex flex-col lg:gap-6 gap-3 shadow h-max lg:w-[55vw] w-full">
+      <div className="lg:p-4 p-4 border rounded-2xl bg-[#fff] overflow-hidden max-w-[96vw] dark:bg-[#000] transition dark:border-gray-600/30  dark:text-[#fff] flex flex-col lg:gap-6 gap-3 shadow h-max lg:w-[55vw] w-full">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <p className="capitalize text-[#26282c] dark:text-[#fff] lg:text-xl text-lg font-semibold">
               sales trends
             </p>
             {sortMonth ? (
-              <span className="p-1 lg:rounded-xl rounded border dark:border-[#f5f5f5]/30 lg:px-4">
+              <span className="p-1 lg:rounded-xl text-xs lg:text-base rounded border dark:border-[#f5f5f5]/30 lg:px-4">
                 2023
               </span>
             ) : (
@@ -121,12 +121,12 @@ export const BarChart = () => {
             </div>
           )}
 
-          <div className="flex flex-1 justify-between items-end text-[#525252] capitalize relative  z-20 lg:h-72 h-[13rem]">
+          <div className="flex flex-1 justify-between items-end text-[#525252] capitalize relative  z-20 lg:h-72 h-[14rem]">
             {sortMonth
               ? monthlySalesData.map((data, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center md:gap-2 relative bottom-0"
+                    className="flex flex-col items-center md:gap-2 gap-2 relative bottom-0"
                   >
                     <div
                       style={{ height: `${(data.sales / 50) * 18 - 2}rem` }}

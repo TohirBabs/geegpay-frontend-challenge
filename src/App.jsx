@@ -79,9 +79,9 @@ function App() {
     >
       {activePage === "dashboard" ? (
         <div className="flex flex-col bg-[#f5f5f5] transition  dark:bg-[#0a0a0a] gap-4  lg:p-4 p-2">
-          <div className="flex flex-col-reverse lg:flex-row gap-4 ">
+          <div className="flex flex-col-reverse lg:flex-row lg:items-center  gap-4 ">
             <BarChart />
-            <div className="flex flex-wrap lg:gap-3 gap-2">
+            <div className="flex flex-wrap h-full lg:gap-2 gap-2">
               {cardData.map((data, index) => (
                 <TrendCard key={index} data={data} />
               ))}
