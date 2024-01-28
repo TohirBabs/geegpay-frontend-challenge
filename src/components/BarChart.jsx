@@ -138,7 +138,7 @@ export const BarChart = () => {
                     </div>
                     <div
                       style={{ height: `${(data.sales / 50) * 14 - 2}rem` }}
-                      className="lg:w-7 w-[4vw] lg:hidden  rounded-t-full bg-[#34caa5]/50"
+                      className="lg:w-7 w-[2vw] lg:hidden  rounded-t-full bg-[#34caa5]/50"
                     ></div>
                     <p className="text-[#52525]">{data.month}</p>
                   </div>
