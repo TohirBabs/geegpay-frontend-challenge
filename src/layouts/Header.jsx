@@ -83,12 +83,12 @@ const Header = ({
               </button>
               <div
                 style={{
-                  height: notificationsOpen ? "10.8rem" : "0",
+                  height: notificationsOpen ? "11.4rem" : "0",
                   width: notificationsOpen ? "max-content" : "0",
                 }}
-                className="transition-all absolute top-11 text-xs border flex flex-col dark:bg-[#000] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden   "
+                className="transition-all absolute top-11 lg:text-xs text-[0.7rem] border flex flex-col dark:bg-[#000] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden   "
               >
-                <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
+                <button className="flex items-center border-b gap-2 text-left pr-8 p-2 hover:bg-[#000]/10">
                   <img src={corey} className="h-8 w-8 rounded-full" />
                   <div className="flex flex-col gap-1 text-[#111111]/50 dark:text-[#fff]/60">
                     <p>
@@ -100,7 +100,7 @@ const Header = ({
                     <p>3 hours ago . corey consults</p>
                   </div>
                 </button>
-                <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
+                <button className="flex items-center border-b gap-2 text-left pr-8 p-2 hover:bg-[#000]/10">
                   <img src={cooper} className="h-8 w-8 rounded-full" />
                   <div className="flex flex-col gap-1 text-[#111111]/50 dark:text-[#fff]/60">
                     <p>
@@ -112,7 +112,7 @@ const Header = ({
                     <p>2 days ago . press international</p>
                   </div>
                 </button>
-                <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
+                <button className="flex items-center border-b gap-2 text-left pr-8   p-2 hover:bg-[#000]/10">
                   <img src={phillip} className="h-8 w-8 rounded-full" />
                   <div className="flex flex-col gap-1 text-[#111111]/50 dark:text-[#fff]/60">
                     <p>
