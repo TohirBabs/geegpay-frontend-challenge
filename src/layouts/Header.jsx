@@ -6,6 +6,9 @@ import userdp from "../assets/images/panda.png";
 import github from "../assets/icons/github.png";
 import twitter from "../assets/icons/twitter.png";
 import linkedin from "../assets/icons/linkedin.png";
+import corey from "../assets/images/corey.png";
+import cooper from "../assets/images/cooper.png";
+import phillip from "../assets/images/phillip.png";
 
 const Header = ({
   navClosed,
@@ -17,6 +20,7 @@ const Header = ({
 }) => {
   const [userData, setUserData] = useState(null);
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
 
   const responseGoogle = (response) => {
     // Handle the Google login response
@@ -67,12 +71,61 @@ const Header = ({
               <CalendarIcon color={darkMode ? "#fff" : "#0D062D"} />
               <p>{date}</p>
             </div>
-            <button className="p-2 border bg-[#fff] dark:bg-[#000] relative dark:border-[#fff]/30 rounded-full">
-              <div className="absolute  bg-[#ed544e] rounded-full text-xs text-[#fff] -right-2 -top-2 h-5 w-5 items-center flex justify-center ">
-                3
+            <div className="relative flex flex-col items-end">
+              <button
+                onClick={() => setNotificationsOpen(!notificationsOpen)}
+                className="p-2 border bg-[#fff] dark:bg-[#000] relative dark:border-[#fff]/30 rounded-full"
+              >
+                <div className="absolute  bg-[#ed544e] rounded-full text-xs text-[#fff] -right-2 -top-2 h-5 w-5 items-center flex justify-center ">
+                  3
+                </div>
+                <BellOutlineIcon color={darkMode ? "#fff" : "#0D062D"} />
+              </button>
+              <div
+                style={{
+                  height: notificationsOpen ? "10.8rem" : "0",
+                  width: notificationsOpen ? "max-content" : "0",
+                }}
+                className="transition-all absolute top-11 text-xs border flex flex-col dark:bg-[#000] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden   "
+              >
+                <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
+                  <img src={corey} className="h-8 w-8 rounded-full" />
+                  <div className="flex flex-col gap-1 text-[#111111]/50">
+                    <p>
+                      <span className="font-semibold capitalize text-[#000] text-sm">
+                        corey schleifer{" "}
+                      </span>
+                      confirmed payment
+                    </p>
+                    <p>3 hours ago . corey consults</p>
+                  </div>
+                </button>
+                <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
+                  <img src={cooper} className="h-8 w-8 rounded-full" />
+                  <div className="flex flex-col gap-1 text-[#111111]/50">
+                    <p>
+                      <span className="font-semibold capitalize text-[#000] text-sm">
+                        cooper press{" "}
+                      </span>
+                      made a request for price
+                    </p>
+                    <p>2 days ago . press international</p>
+                  </div>
+                </button>
+                <button className="flex items-center border-b gap-2 text-left pr-12 p-2 hover:bg-[#000]/10">
+                  <img src={phillip} className="h-8 w-8 rounded-full" />
+                  <div className="flex flex-col gap-1 text-[#111111]/50">
+                    <p>
+                      <span className="font-semibold capitalize text-[#000] text-sm">
+                        phillip lubin{" "}
+                      </span>
+                      recieved their invoice
+                    </p>
+                    <p>3 days ago . lubin finance</p>
+                  </div>
+                </button>
               </div>
-              <BellOutlineIcon color={darkMode ? "#fff" : "#0D062D"} />
-            </button>
+            </div>
           </div>
           {/* {userData ? (
             <div className="p-1 lg:pr-3 rounded-full border dark:border-[#dadddd] text-sm  items-center flex">
@@ -135,23 +188,35 @@ const Header = ({
             </button>
             <div
               style={{
-                height: profileMenuOpen ? "6rem" : "0",
+                height: profileMenuOpen ? "10.5rem" : "0",
                 width: profileMenuOpen ? "max-content" : "0",
               }}
-              className="transition-all absolute top-14 border flex flex-col dark:bg-[#000] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden  gap-2 "
+              className="transition-all absolute top-14 shadow border flex flex-col dark:bg-[#000] bg-gray-100 dark:border-gray-600/80  rounded-2xl overflow-hidden  gap-2 "
             >
-              <p className="p-2 px-6  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 ">
+              <p className="p-3  pr-10  text-left capitalize rounded-full dark:hover:bg-[f5f5f5]/20 ">
                 connect with me @
               </p>
-              <div className="flex gap-2 px-2 items-center justify-center">
-                <a href="https://github.com/TohirBabs">
-                  <img src={github} className="w-7" />
+              <div className="flex flex-col gap-2 px-2  ">
+                <a
+                  href="https://github.com/TohirBabs"
+                  className="flex gap-2 p-1 "
+                >
+                  <img src={github} className="w-5" />
+                  <p>github</p>
                 </a>
-                <a href="https://twitter.com/BabsTohir">
-                  <img src={twitter} className="w-8" />
+                <a
+                  href="https://twitter.com/BabsTohir"
+                  className="flex gap-2 p-1"
+                >
+                  <img src={twitter} className="w-5" />
+                  <p>twitter</p>
                 </a>
-                <a href="https://www.linkedin.com/in/tohir-babs-6a0045167/">
-                  <img src={linkedin} className="w-8" />
+                <a
+                  href="https://www.linkedin.com/in/tohir-babs-6a0045167/"
+                  className="flex gap-2 p-1"
+                >
+                  <img src={linkedin} className="w-5" />
+                  <p>linkedin</p>
                 </a>
               </div>
             </div>
