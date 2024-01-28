@@ -32,11 +32,11 @@ export const BarChart = () => {
               sales trends
             </p>
             {sortMonth ? (
-              <span className="p-1 rounded-xl border dark:border-[#f5f5f5]/30 px-4">
+              <span className="p-1 lg:rounded-xl rounded border dark:border-[#f5f5f5]/30 lg:px-4">
                 2023
               </span>
             ) : (
-              <span className="p-1 rounded-xl border dark:border-[#f5f5f5]/30 text-xs lg:text-base px-4 ">
+              <span className="p-1 lg:rounded-xl rounded border dark:border-[#f5f5f5]/30 text-xs lg:text-base lg:px-4 ">
                 2024{" "}
                 <span className="font-bold text-[#26282c] dark:text-[#fff]">
                   - JAN
